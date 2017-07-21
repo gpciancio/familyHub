@@ -11,7 +11,7 @@ class Calendar extends React.Component {
 
   render() {
     return (
-      <iframe src={this.state.src} width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      <iframe src={this.state.src} title="Calendar" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
     )
   }
 
