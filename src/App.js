@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Calendar from './components/calendar';
+import TodoContainer from './components/todo-container';
 import Weather from './components/Weather';
 
 class App extends Component {
+
   render() {
     return (
       <div>
@@ -19,7 +21,7 @@ class App extends Component {
         </div>
 
         <div id="todo">
-
+          <TodoContainer/>
         </div>
       </div>
     );
