@@ -15,6 +15,35 @@ class TodoContainer extends React.Component {
      this.markItemCompleted = this.markItemCompleted.bind(this);
      this.handleDeleteItem = this.handleDeleteItem.bind(this);
    }
+
+   componentDidUpdate(){
+     this.saveState();
+   }
+
+   componentDidMount(){
+     this.loadState();
+   }
+
+
+   saveState = () => {
+     const serializedState = JSON.stringify(this.state.items);
+     localStorage.setItem('famhub-todo-items', serializedState);
+   }
+
+   loadState = () => {
+    const serializedState = localStorage.getItem('famhub-todo-items');
+    if (serializedState !== null) {
+
+      let storedItems = JSON.parse(serializedState);
+
+      this.setState({
+        items: storedItems
+      });
+    }
+
+    return;
+  }
+
    handleTextChange(event) {
      this.setState({
        text: event.target.value
@@ -47,6 +76,7 @@ class TodoContainer extends React.Component {
        items: [].concat(updatedItems)
      });
    }
+
    handleDeleteItem(itemId) {
      var updatedItems = this.state.items.filter(item => {
        return item.id !== itemId;
@@ -67,7 +97,7 @@ class TodoContainer extends React.Component {
             <TodoList
               items={this.state.items}
               onItemCompleted={this.markItemCompleted} onDeleteItem={this.handleDeleteItem}
-            />            
+            />
           </div>
         </div>
         <form className="row">
