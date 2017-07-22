@@ -3,3 +3,57 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.calendar {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 50vh;
+}
+.calendar iframe {
+  border-style: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 50vw;
+  height: 50vh;
+}
+
+.weather {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  top: 0;
+  left: 50vw;
+}
+
+.todo {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  top: 50vh;
+  left: 50vw;
+}
+
+.whiteboard {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  top: 50vh;
+}
+
+.drawArea {
+  width: 50vw;
+  height: 50vh;
+}
+
+
+
+/* whiteboard styling */
+.path {
+  fill: none;
+  stroke-width: 1px;
+  stroke: black;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
