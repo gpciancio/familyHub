@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Calendar from './components/calendar';
-import TodoList from './components/todo-list';
+import TodoContainer from './components/todo-container';
 
 class App extends Component {
   constructor(props) {
@@ -74,25 +74,10 @@ class App extends Component {
         </div>
 
         <div id="todo">
-          <div>
-            <h3 className="apptitle">MY TO DO LIST</h3>
-            <div className="row">
-              <div className="col-md-3">
-                <TodoList
-                  items={this.state.items}
-                  onItemCompleted={this.markItemCompleted} onDeleteItem={this.handleDeleteItem}
-                />
-              </div>
-            </div>
-            <form className="row">
-              <div className="col-md-3">
-                <input type="text" className="form-control" onChange={this.handleTextChange} value={this.state.text} />
-              </div>
-              <div className="col-md-3">
-                <button className="btn btn-primary" onClick={this.handleAddItem} disabled={!this.state.text}>{"Add #" + (this.state.items.length + 1)}</button>
-              </div>
-            </form>
-          </div>
+          <TodoContainer
+            items={this.state.items}
+            onItemCompleted={this.markItemCompleted} onDeleteItem={this.handleDeleteItem}
+          />
         </div>
       </div>
     );
