@@ -47,6 +47,11 @@ body {
   height: 50vh;
 }
 
+.drawing {
+  width: 99%;
+  height: 99%;
+}
+
 
 
 /* whiteboard styling */
