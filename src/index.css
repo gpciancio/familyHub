@@ -8,42 +8,48 @@ body {
   position: relative;
   height: 0;
   overflow: hidden;
-  padding-bottom: 50vh;
+  padding-bottom: 60vh;
 }
 .calendar iframe {
   border-style: none;
   position: absolute;
   top:0;
   left: 0;
-  width: 50vw;
+  width: 70vw;
   height: 50vh;
 }
 
 .weather {
   position: absolute;
-  width: 50vw;
-  height: 50vh;
   top: 0;
-  left: 50vw;
+  left:70vw;
+  padding-bottom: 1vh;
+}
+.weather iframe {
+  border-style: none;
+  position: absolute;
+  height:100vh;
+  width:30vw;
 }
 
 .todo {
   position: absolute;
-  width: 50vw;
+  width: 25vw;
   height: 50vh;
   top: 50vh;
-  left: 50vw;
+  left: 45vw;
 }
 
 .whiteboard {
   position: absolute;
-  width: 50vw;
+  width: 45vw;
   height: 50vh;
   top: 50vh;
 }
 
 .drawArea {
-  width: 50vw;
+  background-color: black;
+  width: 45vw;
   height: 50vh;
 }
 
@@ -58,7 +64,7 @@ body {
 .path {
   fill: none;
   stroke-width: 1px;
-  stroke: black;
+  stroke: white;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
