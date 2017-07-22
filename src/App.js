@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Calendar from './components/calendar';
+import Weather from './components/Weather';
 
 class App extends Component {
   render() {
@@ -10,7 +11,7 @@ class App extends Component {
         </div>
 
         <div id="weather">
-
+          <Weather />
         </div>
 
         <div id="whiteboard">
