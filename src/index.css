@@ -4,6 +4,45 @@ body {
   font-family: sans-serif;
 }
 
+<<<<<<< HEAD
+.splash_container {
+  background-image: url("./img/ipadfam.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.emailform {
+  font-size: 1.2em;
+}
+
+.famhubtitle {
+  display: block;
+  margin: 5px 10px 50px 10px;
+  font-size: 2.2em;
+}
+
+.form-control {
+  padding-right: 150px;
+}
+
+.stage {
+  margin-top: 370px;
+  font-size: 1.4rem;
+  font-weight: 200;
+  padding: 40px 10px;
+  text-align: center;
+  color: black;
+  background-color: rgba(240, 248, 255, .9);
+  z-index: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+=======
 
 /* Start todo list styling*/
 
@@ -59,3 +98,4 @@ body {
 }
 
 /* End todo list styling*/
+>>>>>>> 7d0c3f654f1d24f3e703900e02db73e2672da231
