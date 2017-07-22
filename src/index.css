@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
 }
 
+<<<<<<< HEAD
 .splash_container {
   background-image: url("./img/ipadfam.jpg");
   background-size: cover;
@@ -41,3 +42,60 @@ body {
   -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
 }
+=======
+
+/* Start todo list styling*/
+
+
+.apptitle {
+  margin: 1rem 0;
+  color: #ff2968
+}
+
+.todolist {
+  padding-left: 0;
+
+  .todoitem {
+    position: relative;
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border-top: 1px solid #ccc;
+
+    &.done {
+      .form-check-label {
+        color: #999;
+      text-decoration: line-through;
+      }
+    }
+
+    &.highlight {
+      border-color: #ff2968;
+      background-color: #ff8fb0;
+
+      &:last-child {
+        border-color: #ff2968;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .btn-danger {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+
+    .form-check-label {
+      width: 100%;
+
+      .form-check-input {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+/* End todo list styling*/
+>>>>>>> 7d0c3f654f1d24f3e703900e02db73e2672da231
