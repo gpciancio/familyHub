@@ -18,8 +18,9 @@ body {
 }
 
 .famhubtitle {
+  margin-top: -10px;
   display: block;
-  margin: 5px 10px 50px 10px;
+  margin: 10px 10px 50px 10px;
   font-size: 2.2em;
 }
 
