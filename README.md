@@ -14,5 +14,7 @@ A user simply enters in ther family's Google username and it will load their cal
 # Links:
 
 Wireframes: https://github.com/gpciancio/familyHub/blob/master/wireframes/FHWireframes.pdf
+
 Waffle.io: https://waffle.io/gpciancio/familyHub
+
 Heroku Deplooyed: https://family-hub.herokuapp.com/
