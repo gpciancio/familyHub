@@ -30,18 +30,17 @@ class TodoListItem extends React.Component {
     return (
       <li
         onClick={this.markCompleted}
-        className={"todo" + (this.props.completed === "done" ? " todo-completed" : "")}
+        className={"todo " + (this.props.completed ? "todo-completed" : "")}
         ref={li => this._listItem = li }
       >
         <i
-          className={"fa " + (this.props.completed === "done" ? 'fa-dot-circle-o' : 'fa-circle-o')}>
+          className={"fa " + (this.props.completed ? 'fa-dot-circle-o' : 'fa-circle-o')}>
          {this.props.text}
         </i>
-        <button
-          type="button"
-          className="btn btn-danger btn-sm"
-          onClick={this.deleteItem}>X
-        </button>
+        <i
+          className="fa fa-times"
+          onClick={this.deleteItem}>
+        </i>
       </li>
     );
   }

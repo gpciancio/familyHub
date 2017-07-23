@@ -100,27 +100,53 @@ class TodoContainer extends React.Component {
             />
           </div>
         </div>
+
         <form
-          id="add-form"
-          className="row">
-          <div className="col-md-3">
-            <input type="text"
-              className="form-control"
-              placeholder="Add an item..."
-              onChange={this.handleTextChange}
-              value={this.state.text} />
-          </div>
-          <div className="col-md-3">
-            <button
-              className="btn btn-primary"
-              onClick={this.handleAddItem}
-              disabled={!this.state.text}>Add
-            </button>
-          </div>
+          id="AddTodo"
+          className="add-todo"
+          onSubmit={this.handleTextChange}
+        >
+          <input
+            type="text"
+            placeholder="Add a todo..."
+          />
+          <button
+            type="submit"
+          >
+            <i
+              className="fa fa-plus"
+            >
+            </i>
+          </button>
         </form>
       </div>
     )
   }
+
+  // <form
+  //   id="add-form"
+  //   className="row">
+  //   <div className="col-md-3">
+  //     <input type="text"
+  //       className="form-control"
+  //       placeholder="Add an item..."
+  //       onChange={this.handleTextChange}
+  //       value={this.state.text} />
+  //   </div>
+  //   <div
+  //     className="col-md-3">
+  //     <button
+  //       type="submit"
+  //       onClick={this.handleAddItem}
+  //       disabled={!this.state.text}
+  //     >
+  //       <i
+  //         className="fa fa-plus"
+  //       >
+  //       </i>
+  //     </button>
+  //   </div>
+  // </form>
 
 }
 
