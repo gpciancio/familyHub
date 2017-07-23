@@ -90,7 +90,7 @@ class TodoContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="todo-list-container">
         <h3 className="apptitle">MY TO DO LIST</h3>
         <div className="row">
           <div className="col-md-3">
@@ -100,10 +100,13 @@ class TodoContainer extends React.Component {
             />
           </div>
         </div>
-        <form className="row">
+        <form
+          id="add-form"
+          className="row">
           <div className="col-md-3">
             <input type="text"
               className="form-control"
+              placeholder="Add an item..."
               onChange={this.handleTextChange}
               value={this.state.text} />
           </div>

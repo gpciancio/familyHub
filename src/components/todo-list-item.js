@@ -27,26 +27,20 @@ class TodoListItem extends React.Component {
    }
 
   render() {
-    var itemClass = "form-check todoitem " + (this.props.completed ? "done" : "undone");
     return (
       <li
-        className={itemClass}
+        onClick={this.markCompleted}
+        className={"todo" + (this.props.completed === "done" ? " todo-completed" : "")}
         ref={li => this._listItem = li }
       >
-        <label
-          className="form-check-label">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            checked={this.props.completed} 
-            onChange={this.markCompleted}
-          />
-          {this.props.text}
-        </label>
+        <i
+          className={"fa " + (this.props.completed === "done" ? 'fa-dot-circle-o' : 'fa-circle-o')}>
+         {this.props.text}
+        </i>
         <button
           type="button"
           className="btn btn-danger btn-sm"
-          onClick={this.deleteItem}>x
+          onClick={this.deleteItem}>X
         </button>
       </li>
     );
