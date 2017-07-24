@@ -49,11 +49,14 @@ body {
 
 .drawArea {
   background-color: black;
+  border-radius: 10px;
   width: 45vw;
   height: 50vh;
 }
 
 .drawing {
+  top:1px;
+  left:1px;
   width: 99%;
   height: 99%;
 }
