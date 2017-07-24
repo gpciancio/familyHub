@@ -1,61 +1,158 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.calendar {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 60vh;
+}
+.calendar iframe {
+  border-style: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 70vw;
+  height: 50vh;
+}
+
+.weather {
+  position: absolute;
+  top: 0;
+  left:70vw;
+  padding-bottom: 1vh;
+}
+.weather iframe {
+  border-style: none;
+  position: absolute;
+  height:100vh;
+  width:30vw;
+}
+
+.whiteboard {
+  position: absolute;
+  width: 47vw;
+  height: 54vh;
+  top: 50vh;
+  border: 1vw solid #FFF7D7;
+  border-radius: 10px;
+}
+
+.drawArea {
+  background-color: black;
+  width: 45vw;
+  height: 50vh;
+}
+
+.drawing {
+  width: 99%;
+  height: 99%;
+}
+
+.splash_container {
+  background-image: url("./img/ipadfam.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.emailform {
+  font-size: 1.2em;
+}
+
+.famhubtitle {
+  display: block;
+  margin: 5px 10px 50px 10px;
+  font-size: 2.2em;
+}
+
+.form-control {
+  padding-right: 150px;
+}
+
+.stage {
+  margin-top: 370px;
+  font-size: 1.4rem;
+  font-weight: 200;
+  padding: 40px 10px;
+  text-align: center;
+  color: black;
+  background-color: rgba(240, 248, 255, .9);
+  z-index: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Todo list styling*/
+
+
+#todo-list-container {
+  position: absolute;
+  width: 22vw;
+  height: 53vh;
+  top: 50vh;
+  left: 47.5vw;
+  border-radius: 5px;
+  background: #F2948C;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  text-align: center;
+}
+
+#todo-list, #add-form{
+  font-size: 1.5em;
+  text-align: left;
+  width: 21vw;
+
+}
+
+#todo-list {
+  height: 40vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
+  border-bottom: 3px solid #b60d38;
+}
+
+#todo-list li:hover {
+  color: #333333;
+  background: #efefef;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.todo{
+  z-index: 1000;
 }
 
 
-/* Start todo list styling*/
 
 
-.apptitle {
-  margin: 1rem 0;
-  color: #ff2968
+/* whiteboard styling */
+.path {
+  fill: none;
+  stroke-width: 1px;
+  stroke: white;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }
-
-.todolist {
-  padding-left: 0;
-
-  .todoitem {
-    position: relative;
-    margin-bottom: 0.25rem;
-    padding: 0.5rem 2rem 0.5rem 0.5rem;
-    border-top: 1px solid #ccc;
-
-    &.done {
-      .form-check-label {
-        color: #999;
-      text-decoration: line-through;
-      }
-    }
-
-    &.highlight {
-      border-color: #ff2968;
-      background-color: #ff8fb0;
-
-      &:last-child {
-        border-color: #ff2968;
-      }
-    }
-
-    &:last-child {
-      border-bottom: 1px solid #ccc;
-    }
-
-    .btn-danger {
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
-    }
-
-    .form-check-label {
-      width: 100%;
-
-      .form-check-input {
-        margin-right: 1rem;
-      }
-    }
-  }
-}
-
-/* End todo list styling*/
