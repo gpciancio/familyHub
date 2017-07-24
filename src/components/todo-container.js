@@ -27,6 +27,7 @@ class TodoContainer extends React.Component {
 
    saveState = () => {
      const serializedState = JSON.stringify(this.state.items);
+     console.log(serializedState);
      localStorage.setItem('famhub-todo-items', serializedState);
    }
 
@@ -35,6 +36,7 @@ class TodoContainer extends React.Component {
     if (serializedState !== null) {
 
       let storedItems = JSON.parse(serializedState);
+      console.log(storedItems);
 
       this.setState({
         items: storedItems
@@ -49,6 +51,7 @@ class TodoContainer extends React.Component {
        text: event.target.value
      });
    }
+
    handleAddItem(event) {
      event.preventDefault();
 
@@ -90,7 +93,7 @@ class TodoContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="todo-list-container">
         <h3 className="apptitle">MY TO DO LIST</h3>
         <div className="row">
           <div className="col-md-3">
@@ -100,25 +103,34 @@ class TodoContainer extends React.Component {
             />
           </div>
         </div>
-        <form className="row">
+
+        <form
+          id="add-form"
+          className="row">
           <div className="col-md-3">
             <input type="text"
               className="form-control"
+              placeholder="Add an item..."
               onChange={this.handleTextChange}
               value={this.state.text} />
           </div>
-          <div className="col-md-3">
+          <div
+            className="col-md-3">
             <button
-              className="btn btn-primary"
+              type="submit"
               onClick={this.handleAddItem}
-              disabled={!this.state.text}>Add
+              disabled={!this.state.text}
+            >
+              <i
+                className="fa fa-plus"
+              >
+              </i>
             </button>
           </div>
         </form>
       </div>
     )
   }
-
 }
 
 export default TodoContainer;
