@@ -92,68 +92,6 @@ body {
 
 /* Todo list styling*/
 
-.todo {
-  padding: 0 2.5rem 0 .75rem;
-  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-}
-
-.todo:after {
-  font-family: FontAwesome;
-  content: "\f00c";
-  position: absolute;
-  right: .75rem;
-  color: #2ecc71;
-  opacity: 0;
-  transform: scale(0);
-  transition: transform, opacity, 0.25s cubic-bezier(0.55, 0, 0.1, 1);
-}
-.todo + .todo {
-  margin-top: 1rem;
-  padding-top: 1rem;
-}
-.todo + .todo:before {
-  content: '';
-  background: #e8ebed;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  border-radius: 2px;
-}
-.todo__content {
-  position: relative;
-  opacity: 1;
-  text-transform: capitalize;
-  cursor: pointer;
-  transition: opacity 0.25s ease-out;
-}
-.todo__content:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: calc( 100% + .5em );
-  left: -.25em;
-  height: 2px;
-  top: 50%;
-  border-radius: 1px;
-  background: #2E2E2E;
-  transform-origin: center right;
-  transform: scaleX(0);
-  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-}
-.todo.todo--completed:after {
-  opacity: 1;
-  transform: scale(1);
-}
-.todo.todo--completed .todo__content {
-  opacity: 0.5;
-}
-.todo.todo--completed .todo__content:after {
-  transform: scaleX(1);
-  transform-origin: center left;
-}
-
 
 #todo-list-container {
   position: absolute;
@@ -201,6 +139,10 @@ body {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.todo{
+  z-index: 1000;
 }
 
 

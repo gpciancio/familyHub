@@ -12,31 +12,20 @@ class TodoListItem extends React.Component {
    deleteItem(event) {
      this.props.onDeleteItem(this.props.id);
    }
-   // Highlight newly added item for several seconds.
-   componentDidMount() {
-     if (this._listItem) {
-       // 1. Add highlight class.
-       this._listItem.classList.add("highlight");
 
-       // 2. Set timeout.
-       setTimeout((listItem) => {
-         // 3. Remove highlight class.
-         listItem.classList.remove("highlight");
-       }, 500, this._listItem);
-     }
-   }
 
   render() {
+    console.log(this.props.completed);
     return (
-      <li
-        onClick={this.markCompleted}
-        className={"todo " + (this.props.completed ? "todo-completed" : "")}
-        ref={li => this._listItem = li }
-      >
+      <li>
         <i
-          className={"fa " + (this.props.completed ? 'fa-dot-circle-o' : 'fa-circle-o')}>
-         {this.props.text}
+          className={"fa " + (this.props.completed ? 'fa-dot-circle-o' : 'fa-circle-o')}
+          onClick={this.markCompleted}
+          >
         </i>
+        <span>
+          {this.props.text}
+        </span>
         <i
           className="fa fa-times"
           onClick={this.deleteItem}>
