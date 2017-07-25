@@ -8,10 +8,9 @@ import TodoContainer from './components/todo-container';
 class App extends Component {
   state = {
     email: "familyhub123@gmail.com",
-    showSplash: true
+    showSplash: true,
+    emailInput: false
   }
-
-
 
   componentDidMount = () => {
     this.loadState();
@@ -22,10 +21,9 @@ class App extends Component {
   }
 
   saveEmail = () => {
-    this.setState({showSplash: false});
+    this.setState({showSplash: false, emailInput: true});
     this.saveState();
   }
-
 
   saveState = () => {
     localStorage.setItem('famhub-email', this.state.email);
@@ -59,7 +57,7 @@ class App extends Component {
 
         <div id="calendar" className="calendar">
           <Calendar
-            email={this.state.email}
+            email={this.state.email} emailInput={this.state.emailInput}
           />
         </div>
           <div id="weather" className="weather">
