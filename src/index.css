@@ -50,8 +50,8 @@ body {
 
 .drawing {
   display: inline-block;
-  width: 99%;
-  height: 99%;
+  width: 100%;
+  height: 99.99%;
 }
 
 .splash_container {

@@ -15,7 +15,6 @@ class TodoListItem extends React.Component {
 
 
   render() {
-    console.log(this.props.completed);
     return (
       <li>
         <i
@@ -24,7 +23,7 @@ class TodoListItem extends React.Component {
           >
         </i>{' '}
         <span className={this.props.completed ? 'line':''}>
-          {this.props.text+'\t'+'\t'}
+          {this.props.text}
         </span>
         <i
           className="fa fa-times pull-right"
