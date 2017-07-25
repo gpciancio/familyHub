@@ -22,12 +22,12 @@ class TodoListItem extends React.Component {
           className={"fa " + (this.props.completed ? 'fa-dot-circle-o' : 'fa-circle-o')}
           onClick={this.markCompleted}
           >
-        </i>
-        <span>
-          {this.props.text}
+        </i>{' '}
+        <span className={this.props.completed ? 'line':''}>
+          {this.props.text+'\t'+'\t'}
         </span>
         <i
-          className="fa fa-times"
+          className="fa fa-times pull-right"
           onClick={this.deleteItem}>
         </i>
       </li>

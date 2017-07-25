@@ -53,10 +53,9 @@ class Whiteboard extends React.Component {
 
   relativeCoordinatesForEvent(mouseEvent) {
     const boundingRect = this.refs.drawArea.getBoundingClientRect();
-    console.log(boundingRect);
     return new Immutable.Map({
-      x: mouseEvent.clientX - boundingRect.left,
-      y: mouseEvent.clientY - boundingRect.top,
+      x: mouseEvent.clientX - boundingRect.left - 18,
+      y: mouseEvent.clientY - boundingRect.top - 18,
     });
   }
 
