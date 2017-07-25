@@ -15,19 +15,18 @@ class TodoListItem extends React.Component {
 
 
   render() {
-    console.log(this.props.completed);
     return (
       <li>
         <i
           className={"fa " + (this.props.completed ? 'fa-dot-circle-o' : 'fa-circle-o')}
           onClick={this.markCompleted}
           >
-        </i>
-        <span>
+        </i>{' '}
+        <span className={this.props.completed ? 'line':''}>
           {this.props.text}
         </span>
         <i
-          className="fa fa-times"
+          className="fa fa-times pull-right"
           onClick={this.deleteItem}>
         </i>
       </li>

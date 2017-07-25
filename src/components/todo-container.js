@@ -27,7 +27,6 @@ class TodoContainer extends React.Component {
 
    saveState = () => {
      const serializedState = JSON.stringify(this.state.items);
-     console.log(serializedState);
      localStorage.setItem('famhub-todo-items', serializedState);
    }
 
@@ -36,7 +35,6 @@ class TodoContainer extends React.Component {
     if (serializedState !== null) {
 
       let storedItems = JSON.parse(serializedState);
-      console.log(storedItems);
 
       this.setState({
         items: storedItems
@@ -107,16 +105,15 @@ class TodoContainer extends React.Component {
         <form
           id="add-form"
           className="row">
-          <div className="col-md-3">
+          <div className="col-sm-12">
             <input type="text"
               className="form-control"
               placeholder="Add an item..."
               onChange={this.handleTextChange}
               value={this.state.text} />
-          </div>
-          <div
-            className="col-md-3">
+
             <button
+              className="addButton"
               type="submit"
               onClick={this.handleAddItem}
               disabled={!this.state.text}
