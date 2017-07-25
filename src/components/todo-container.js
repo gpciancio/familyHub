@@ -92,7 +92,7 @@ class TodoContainer extends React.Component {
   render() {
     return (
       <div id="todo-list-container">
-        <h3 className="apptitle">MY TO DO LIST</h3>
+        <h3 className="apptitle shake">MY TO DO LIST</h3>
         <div className="row">
           <div className="col-md-3">
             <TodoList
@@ -106,23 +106,28 @@ class TodoContainer extends React.Component {
           id="add-form"
           className="row">
           <div className="col-sm-12">
+            <div className="inline">
+
+
             <input type="text"
-              className="form-control"
+              className="form-control todoform"
               placeholder="Add an item..."
               onChange={this.handleTextChange}
-              value={this.state.text} />
+              value={this.state.text} ></input>
 
-            <button
-              className="addButton"
-              type="submit"
-              onClick={this.handleAddItem}
-              disabled={!this.state.text}
-            >
-              <i
-                className="fa fa-plus"
+              <button
+                className="addButton"
+                type="submit"
+                onClick={this.handleAddItem}
+                disabled={!this.state.text}
               >
-              </i>
-            </button>
+                <i
+                  className="fa fa-plus"
+                >
+                </i>
+              </button>
+
+            </div>
           </div>
         </form>
       </div>

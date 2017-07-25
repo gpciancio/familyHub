@@ -31,17 +31,18 @@ body {
   position: absolute;
   height: 100vh;
   width: 15vw;
+      margin-top: 38px
 }
 
 .whiteboard {
   position: absolute;
   width: 47vw;
   height: 50vh;
-  top: 49vh;
+  top: 50.5vh;
 }
 
 .drawArea {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);*/
   display: inline-block;
   border: 20px solid #FFF7D7;
   border-radius: 10px;
@@ -77,12 +78,6 @@ body {
   font-size: 1.2em;
 }
 
-.addButton {
-  position: absolute;
-  left: 240px;
-  top: -1px;
-}
-
 .line {
   text-decoration: line-through;
 }
@@ -93,8 +88,12 @@ body {
   font-size: 2.2em;
 }
 
-.form-control {
+.paddingright {
   padding-right: 150px;
+}
+
+.inline {
+  display: inline;
 }
 
 .stage {
@@ -115,15 +114,33 @@ body {
 
 /* Todo list styling*/
 
+.form-control {
+  display: inline;
+  width: auto;
+  padding: 19px 0px;
+}
+
+.addButton {
+  margin-left: 3px;
+  border-radius: 2px;
+}
+
+.todoform {
+  padding-bottom: 18px;
+  padding-left: 10px;
+  padding-right: 3px;
+  margin-left: -10px;
+}
+
 #todo-list-container {
   position: absolute;
-  width: 22vw;
+  width: 22.4vw;
   height: 50vh;
-  top: 49vh;
+  top: 50.5vh;
   left: 47.5vw;
   border-radius: 5px;
   background: rgb(227, 233, 255);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);*/
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   text-align: center;
@@ -131,9 +148,10 @@ body {
 
 #todo-list, #add-form {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: left;
   width: 21vw;
+  margin-left: -15px;
 }
 
 #todo-list {
@@ -141,16 +159,13 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   list-style: none;
-  border-bottom: 3px solid rgb(34, 0, 204);
 }
 
 #todo-list li:hover {
   color: #333333;
   background: #efefef;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 ::-webkit-scrollbar {
