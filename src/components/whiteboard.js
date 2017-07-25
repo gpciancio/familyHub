@@ -16,10 +16,12 @@ class Whiteboard extends React.Component {
 
   componentDidMount() {
     document.addEventListener("mouseup", this.handleMouseUp);
+    document.addEventListener("touchend", this.handleMouseUp);
   }
 
   componentWillUnmount() {
     document.removeEventListener("mouseup", this.handleMouseUp);
+    document.removeEventListener("touchend", this.handleMouseUp);
   }
 
   handleMouseDown(mouseEvent) {
@@ -36,6 +38,7 @@ class Whiteboard extends React.Component {
   }
 
   handleMouseMove(mouseEvent) {
+    console.log(mouseEvent);
     if (!this.state.isDrawing) {
       return;
     }
@@ -64,6 +67,8 @@ class Whiteboard extends React.Component {
       <div
         className="drawArea"
         ref="drawArea"
+        onTouchStart={this.handleMouseDown}
+        onTouchMove={this.handleMouseMove}
         onMouseDown={this.handleMouseDown}
         onMouseMove={this.handleMouseMove}
       >
