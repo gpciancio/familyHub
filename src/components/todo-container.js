@@ -3,131 +3,149 @@ import TodoList from './todo-list';
 
 class TodoContainer extends React.Component {
   constructor(props) {
-     super(props);
+    super(props);
 
-     this.state = {
-       items: [],
-       text: ""
-     };
+    this.state = {
+      todoitems: [],
+      groceryitems: [],
+      todo: true,
+      text: ""
+    };
 
-     this.handleTextChange = this.handleTextChange.bind(this);
-     this.handleAddItem = this.handleAddItem.bind(this);
-     this.markItemCompleted = this.markItemCompleted.bind(this);
-     this.handleDeleteItem = this.handleDeleteItem.bind(this);
-   }
+    this.handleTextChange = this.handleTextChange.bind(this);
+    this.handleAddItem = this.handleAddItem.bind(this);
+    this.markItemCompleted = this.markItemCompleted.bind(this);
+    this.handleDeleteItem = this.handleDeleteItem.bind(this);
+  }
 
-   componentDidUpdate(){
-     this.saveState();
-   }
+  componentDidUpdate() {
+    this.saveState();
+  }
 
-   componentDidMount(){
-     this.loadState();
-   }
+  componentDidMount() {
+    this.loadState();
+  }
 
+  saveState = () => {
+    var serializedState = JSON.stringify(this.state.todoitems);
+    localStorage.setItem('famhub-todo-items', serializedState);
+    serializedState = JSON.stringify(this.state.groceryitems);
+    localStorage.setItem('famhub-grocery-items', serializedState);
+  }
 
-   saveState = () => {
-     const serializedState = JSON.stringify(this.state.items);
-     localStorage.setItem('famhub-todo-items', serializedState);
-   }
-
-   loadState = () => {
-    const serializedState = localStorage.getItem('famhub-todo-items');
+  loadState = () => {
+    var serializedState = localStorage.getItem('famhub-todo-items');
     if (serializedState !== null) {
 
       let storedItems = JSON.parse(serializedState);
 
-      this.setState({
-        items: storedItems
-      });
-    }
+      this.setState({todoitems: storedItems});
 
-    return;
+      serializedState = localStorage.getItem('famhub-grocery-items');
+      if (serializedState !== null) {
+
+        let storedItems = JSON.parse(serializedState);
+
+        this.setState({groceryitems: storedItems});
+      }
+
+      return;
+    }
   }
 
-   handleTextChange(event) {
-     this.setState({
-       text: event.target.value
-     });
-   }
+  handleTextChange(event) {
+    this.setState({text: event.target.value});
+  }
 
-   handleAddItem(event) {
-     event.preventDefault();
+  handleAddItem(event) {
+    event.preventDefault();
 
-     var newItem = {
-       id: Date.now(),
-       text: this.state.text,
-       done: false
-     };
+    var newItem = {
+      id: Date.now(),
+      text: this.state.text,
+      done: false
+    };
 
-     this.setState((prevState) => ({
-       items: prevState.items.concat(newItem),
-       text: ""
-     }));
-   }
-   markItemCompleted(itemId) {
-     var updatedItems = this.state.items.map(item => {
-       if (itemId === item.id)
-         item.done = !item.done;
+    if (this.state.todo) {
+      this.setState((prevState) => ({todoitems: prevState.todoitems.concat(newItem), text: ""}));
+    } else {
+      this.setState((prevState) => ({groceryitems: prevState.groceryitems.concat(newItem), text: ""}));
+    }
+  }
 
-       return item;
-     });
+  markItemCompleted(itemId) {
+    if (this.state.todo) {
+      var updatedItems = this.state.todoitems.map(item => {
+        if (itemId === item.id)
+          item.done = !item.done;
 
-     // State Updates are Merged
-     this.setState({
-       items: [].concat(updatedItems)
-     });
-   }
+        return item;
+      })
+    } else {
+      updatedItems = this.state.groceryitems.map(item => {
+        if (itemId === item.id)
+          item.done = !item.done;
 
-   handleDeleteItem(itemId) {
-     var updatedItems = this.state.items.filter(item => {
-       return item.id !== itemId;
-     });
+        return item;
+      })
+    }
 
-     this.setState({
-       items: [].concat(updatedItems)
-     });
-   }
+    // State Updates are Merged
+    if (this.state.todo) {
+      this.setState({todoitems: [].concat(updatedItems)})
+    } else {
+      this.setState({groceryitems: [].concat(updatedItems)})
+    }
+  }
 
+  handleDeleteItem(itemId) {
+    if (this.state.todo) {
+      var updatedItems = this.state.todoitems.filter(item => {
+        return item.id !== itemId;
+      });
+
+      this.setState({todoitems: [].concat(updatedItems)});
+    } else {
+      updatedItems = this.state.groceryitems.filter(item => {
+        return item.id !== itemId;
+      });
+
+      this.setState({groceryitems: [].concat(updatedItems)});
+    }
+  }
 
   render() {
     return (
       <div id="todo-list-container">
-        <h3 className="apptitle shake">MY TO DO LIST</h3>
-        <div className="row">
-          <div className="col-md-3">
-            <TodoList
-              items={this.state.items}
-              onItemCompleted={this.markItemCompleted} onDeleteItem={this.handleDeleteItem}
-            />
+        <div>
+          <button className={this.state.todo ? "selected" : ""} disabled={this.state.todo} onClick={(index) => this.setState({
+            todo: !this.state.todo
+          })}>To Do</button>
+        <button className={!this.state.todo ? "selected" : ""} disabled={!this.state.todo} onClick={(index) => this.setState({
+            todo: !this.state.todo
+          })}>Grocery</button>
+
+          <div className="row">
+            <div className="col-md-3">
+              <TodoList todo={this.state.todo} items={this.state.todo
+                ? this.state.todoitems
+                : this.state.groceryitems} onItemCompleted={this.markItemCompleted} onDeleteItem={this.handleDeleteItem}/>
+            </div>
           </div>
         </div>
 
-        <form
-          id="add-form"
-          className="row">
+        <form id="add-form" className="row">
           <div className="col-sm-12">
             <div className="inline">
 
+              <input type="text" className="form-control todoform" placeholder="Add an item..." onChange={this.handleTextChange} value={this.state.text}></input>
 
-            <input type="text"
-              className="form-control todoform"
-              placeholder="Add an item..."
-              onChange={this.handleTextChange}
-              value={this.state.text} ></input>
-
-              <button
-                className="addButton"
-                type="submit"
-                onClick={this.handleAddItem}
-                disabled={!this.state.text}
-              >
-                <i
-                  className="fa fa-plus"
-                >
-                </i>
+              <button className="addButton" type="submit" onClick={this.handleAddItem} disabled={!this.state.text}>
+                <i className="fa fa-plus"></i>
               </button>
 
             </div>
+
           </div>
         </form>
       </div>
