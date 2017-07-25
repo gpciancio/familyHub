@@ -11,6 +11,8 @@ class Whiteboard extends React.Component {
 
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.handleTouchDown = this.handleTouchDown.bind(this);
+    this.handleTouchMove = this.handleTouchMove.bind(this);
     this.handleMouseUp = this.handleMouseUp.bind(this);
   }
 
@@ -24,12 +26,34 @@ class Whiteboard extends React.Component {
     document.removeEventListener("touchend", this.handleMouseUp);
   }
 
+  handleTouchDown(touchEvent) {
+    touchEvent.preventDefault();
+
+    const point = this.relativeCoordinatesForEvent(touchEvent,'touch');
+
+    this.setState(prevState => ({
+      lines: prevState.lines.push(new Immutable.List([point])),
+      isDrawing: true
+    }));
+
+  }
+
+  handleTouchMove(touchEvent) {
+    touchEvent.preventDefault();
+
+    const point = this.relativeCoordinatesForEvent(touchEvent,'touch');
+
+    this.setState(prevState =>  ({
+      lines: prevState.lines.updateIn([prevState.lines.size - 1], line => line.push(point))
+    }));
+  }
+
   handleMouseDown(mouseEvent) {
     if (mouseEvent.button !== 0) {
       return;
     }
 
-    const point = this.relativeCoordinatesForEvent(mouseEvent);
+    const point = this.relativeCoordinatesForEvent(mouseEvent,'click');
 
     this.setState(prevState => ({
       lines: prevState.lines.push(new Immutable.List([point])),
@@ -43,7 +67,7 @@ class Whiteboard extends React.Component {
       return;
     }
 
-    const point = this.relativeCoordinatesForEvent(mouseEvent);
+    const point = this.relativeCoordinatesForEvent(mouseEvent,'click');
 
     this.setState(prevState =>  ({
       lines: prevState.lines.updateIn([prevState.lines.size - 1], line => line.push(point))
@@ -54,12 +78,19 @@ class Whiteboard extends React.Component {
     this.setState({ isDrawing: false });
   }
 
-  relativeCoordinatesForEvent(mouseEvent) {
+  relativeCoordinatesForEvent(event,type) {
     const boundingRect = this.refs.drawArea.getBoundingClientRect();
-    return new Immutable.Map({
-      x: mouseEvent.clientX - boundingRect.left - 18,
-      y: mouseEvent.clientY - boundingRect.top - 18,
-    });
+    if(type==="click"){
+      return new Immutable.Map({
+        x: event.clientX - boundingRect.left - 18,
+        y: event.clientY - boundingRect.top - 18,
+      });
+    } else if (type==="touch"){
+      return new Immutable.Map({
+        x: event.touches[0].clientX - boundingRect.left - 18,
+        y: event.touches[0].clientY - boundingRect.top - 18,
+      });
+    }
   }
 
   render() {
@@ -67,8 +98,8 @@ class Whiteboard extends React.Component {
       <div
         className="drawArea"
         ref="drawArea"
-        onTouchStart={this.handleMouseDown}
-        onTouchMove={this.handleMouseMove}
+        onTouchStart={this.handleTouchDown}
+        onTouchMove={this.handleTouchMove}
         onMouseDown={this.handleMouseDown}
         onMouseMove={this.handleMouseMove}
       >

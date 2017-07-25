@@ -36,7 +36,6 @@ body {
   width: 47vw;
   height: 50vh;
   top: 49vh;
-  touch-action: none;
 }
 
 .drawArea {
