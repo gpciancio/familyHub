@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Splash from './components/splash';
 import Calendar from './components/calendar';
 import Weather from './components/weather';
 import Whiteboard from './components/whiteboard';
@@ -9,6 +10,10 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div id="splash" className="splash">
+          <Splash />
+        </div>
+
         <div id="calendar" className="calendar">
           <Calendar />
         </div>
