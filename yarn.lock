@@ -5622,7 +5622,7 @@ socket.io-adapter@~1.1.0:
   dependencies:
     debug "2.3.3"
 
-socket.io-client@~2.0.2:
+socket.io-client@^2.0.3, socket.io-client@~2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-2.0.3.tgz#6caf4aff9f85b19fd91b6ce13d69adb564f8873b"
   dependencies:
@@ -5648,6 +5648,10 @@ socket.io-parser@~3.1.1:
     debug "~2.6.4"
     has-binary2 "~1.0.2"
     isarray "2.0.1"
+
+socket.io-react@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/socket.io-react/-/socket.io-react-1.2.0.tgz#377468613d7079321404f187d6cc9bc246cafae7"
 
 socket.io@^2.0.3:
   version "2.0.3"

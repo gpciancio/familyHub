@@ -3,6 +3,7 @@ import Calendar from './components/calendar';
 import Weather from './components/weather';
 import Whiteboard from './components/whiteboard';
 import TodoContainer from './components/todo-container';
+import Chat from './components/chat';
 
 class App extends Component {
 
@@ -23,6 +24,9 @@ class App extends Component {
 
         <div id="todo" className="todo">
           <TodoContainer/>
+        </div>
+        <div id="chat" className="chat">
+          <Chat />
         </div>
       </div>
     );

@@ -27,8 +27,8 @@ body {
 .weather iframe {
   border-style: none;
   position: absolute;
-  height:100vh;
-  width:15vw;
+  height:50vh;
+  width:30vw;
 }
 
 .whiteboard {
@@ -162,4 +162,11 @@ body {
   stroke: white;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+.chat {
+  position: absolute;
+  left: 70vw;
+  top: 50vh;
+  
 }
