@@ -21,33 +21,35 @@ body {
 
 .weather {
   position: absolute;
-  top: 0;
+  top: -3px;
   left:70vw;
-  padding-bottom: 1vh;
 }
 .weather iframe {
   border-style: none;
   position: absolute;
   height:100vh;
-  width:30vw;
+  width:15vw;
 }
 
 .whiteboard {
   position: absolute;
   width: 47vw;
-  height: 54vh;
-  top: 50vh;
-  border: 1vw solid #FFF7D7;
-  border-radius: 10px;
+  height: 50vh;
+  top: 49vh;
 }
 
 .drawArea {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  border: 20px solid #FFF7D7;
+  border-radius: 10px;
   background-color: black;
-  width: 45vw;
-  height: 50vh;
+  width: 100%;
+  height: 100%;
 }
 
 .drawing {
+  display: inline-block;
   width: 99%;
   height: 99%;
 }
@@ -63,6 +65,16 @@ body {
 
 .emailform {
   font-size: 1.2em;
+}
+
+.addButton {
+  position: absolute;
+  left: 240px;
+  top:-1px;
+}
+
+.line{
+  text-decoration: line-through;
 }
 
 .famhubtitle {
@@ -96,18 +108,19 @@ body {
 #todo-list-container {
   position: absolute;
   width: 22vw;
-  height: 53vh;
-  top: 50vh;
+  height: 50vh;
+  top: 49vh;
   left: 47.5vw;
   border-radius: 5px;
-  background: #F2948C;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background: rgb(227,233,255);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   text-align: center;
 }
 
 #todo-list, #add-form{
+  display: inline-block;
   font-size: 1.5em;
   text-align: left;
   width: 21vw;
@@ -115,11 +128,11 @@ body {
 }
 
 #todo-list {
-  height: 40vh;
+  height: 30vh;
   overflow-y: auto;
   overflow-x: hidden;
   list-style: none;
-  border-bottom: 3px solid #b60d38;
+  border-bottom: 3px solid rgb(34,0,204);
 }
 
 #todo-list li:hover {
@@ -127,6 +140,7 @@ body {
   background: #efefef;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
+  border-radius:10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -140,13 +154,6 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
-
-.todo{
-  z-index: 1000;
-}
-
-
-
 
 /* whiteboard styling */
 .path {
