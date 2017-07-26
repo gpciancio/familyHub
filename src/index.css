@@ -5,6 +5,135 @@ body {
   touch-action: none;
 }
 
+/* Splash Page */
+.bigbutton  {
+  width: 300px !important;
+  margin-top: 20px;
+  background-color: rgb(102,140,217);
+}
+.introtext {
+  padding: 3px;
+  padding-bottom: 30px;
+  color: rgb(245,245,245);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 125px;
+}
+.introtextlg {
+  font-size: 16px;
+
+}
+.totalcontain {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.splash_container {
+  display: block;
+  width: 100%;
+  /*height: 100%;*/
+  z-index: 100;
+  background-image: url("./img/ipadfam.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.emailform {
+  font-size: 1.2em;
+}
+
+
+/*------------CSS for BIOs-----------*/
+
+
+.secondhalf {
+  z-index: 101;
+  position: relative;
+}
+
+.meet-the-team {
+  padding-top: 20px;
+}
+
+.title {
+  color: #222;
+  text-align: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+.title:after {
+  background: rgb(227,233,255);
+    content: "";
+    height: 8px;
+    left: 0;
+    margin: 15px auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 30px;
+    width: 94px;
+}
+
+#logo {
+  transition: transform 0.5s;
+  display: block;
+  margin: 25px auto 0px;
+}
+
+#logo:hover {
+  transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+}
+
+.content {
+  margin: 16px 50px;
+}
+
+.team-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  padding-bottom: 30px;
+}
+
+.team-item {
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+.team-item img {
+  border-radius: 2px;
+}
+
+.team-name {
+  font-size: 24px;
+  color: #383838;
+  -webkit-font-smoothing: antialiased;
+  -webkit-margin-before: 0.2em;
+}
+
+/* Calendar */
+
 .calendar {
   position: relative;
   height: 0;
@@ -89,27 +218,6 @@ body {
   border: 0px;
 }
 
-.splash_container {
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  background-image: url("./img/ipadfam.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-}
-
-.emailform {
-  font-size: 1.2em;
-}
-
 .line {
   text-decoration: line-through;
 }
@@ -117,11 +225,15 @@ body {
 .famhubtitle {
   display: block;
   margin: 5px 10px 50px 10px;
-  font-size: 2.2em;
+  font-size: 4.5em;
+  font-family: 'Exo', sans-serif;
 }
 
 .paddingright {
-  padding-right: 150px;
+  height: 35px !important;
+  overflow: visible !important;
+  width: 300px !important;
+  /*text-align: center;*/
 }
 
 .inline {
@@ -129,13 +241,13 @@ body {
 }
 
 .stage {
-  margin-top: 370px;
+  margin-top: 170px;
   font-size: 1.4rem;
   font-weight: 200;
-  padding: 40px 10px;
+  padding: 110px 10px;
   text-align: center;
-  color: black;
-  background-color: rgba(240, 248, 255, .9);
+  color: white;
+  background-color: rgba(240, 248, 255, .1);
   z-index: 1;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
