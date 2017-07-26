@@ -9,8 +9,19 @@ body {
 .bigbutton  {
   width: 300px !important;
   margin-top: 20px;
+  background-color: rgb(102,140,217);
 }
+.introtext {
+  padding: 3px;
+  padding-bottom: 30px;
+  color: rgb(245,245,245);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 125px;
+}
+.introtextlg {
+  font-size: 16px;
 
+}
 .totalcontain {
   display: block;
   position: fixed;
@@ -214,7 +225,7 @@ body {
 .famhubtitle {
   display: block;
   margin: 5px 10px 50px 10px;
-  font-size: 3.2em;
+  font-size: 4.5em;
   font-family: 'Exo', sans-serif;
 }
 
@@ -230,10 +241,10 @@ body {
 }
 
 .stage {
-  margin-top: 370px;
+  margin-top: 170px;
   font-size: 1.4rem;
   font-weight: 200;
-  padding: 40px 10px;
+  padding: 110px 10px;
   text-align: center;
   color: white;
   background-color: rgba(240, 248, 255, .1);
