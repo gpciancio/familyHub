@@ -8,6 +8,7 @@ import Chat from './components/chat';
 class App extends Component {
 
   render() {
+    console.log("rendering components");
     return (
       <div>
         <div id="calendar" className="calendar">

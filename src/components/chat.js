@@ -1,41 +1,55 @@
 import React from 'react';
 import io from 'socket.io-client';
-let socket = io()
+let socket = io.connect('http://localhost:8000');
 
 class Chat extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      data:{}
+      data: [],
+      message: ""
     };
   }
-componentDidMount(){
-  socket.on(`server:event`,data=>{this.setState({data})})
-  
-}
 
-sendChat = ()=>{
+  componentDidMount(){
+    socket.on("chat", newMsg => {this.setState((prevState) => ({
+      data: prevState.data.concat(newMsg),
+      message: ""
+      }));
+    })
+  }
 
-  let message = this.state.message
-  socket.emit('chat',message)
-debugger;
-
-console.log(message);
-
-
-}
+  sendChat = ()=>{
+    let message = this.state.message
+    socket.emit('chat',message)
+    console.log(message);
+  }
 
   render() {
     return (
       <div>
-      <ul id="messages"></ul>
-      <form >
-        <input onChange={(event)=> this.setState({message:event.target.value})}id="m" /><button onClick={ ()=> this.sendChat() } type="button">Send</button>
-      </form>
+        <ul
+          id="messages"
+        >
+          {this.state.data.map(msg =>
+            <li>{msg}</li>
+          )}
+        </ul>
+        <form >
+          <input
+            onChange={(event) => this.setState({ message: event.target.value})}
+            id="m"
+          />
+          <button
+            onClick={ ()=> this.sendChat() }
+            type="button"
+          >
+            Send
+          </button>
+        </form>
       </div>
     )
   }
-
 }
 
 export default Chat;

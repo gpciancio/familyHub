@@ -4,7 +4,7 @@ var server = require('http').Server(app);
 var io = require('socket.io').listen(server);
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '../public/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 io.on('connection', function(socket){
@@ -14,6 +14,6 @@ io.on('connection', function(socket){
   });
 });
 
-server.listen(3000, function(){
-  console.log('listening on *:3000');
+server.listen(8000, function(){
+  console.log('listening on *:8000');
 });
