@@ -1,6 +1,7 @@
 import React from 'react';
 import io from 'socket.io-client';
-let socket = io.connect('http://localhost:8000');
+let socket = io.connect();
+
 
 class Chat extends React.Component {
   constructor(props){
@@ -19,30 +20,34 @@ class Chat extends React.Component {
     })
   }
 
-  sendChat = ()=>{
-    let message = this.state.message
-    socket.emit('chat',message)
-    console.log(message);
+  sendChat = (event)=>{
+    event.preventDefault();
+    let message = this.state.message;
+    socket.emit('chat',message);
+    let box = document.getElementById('messages');
+    box.scrollTop = box.scrollHeight - box.clientHeight;
+  }
+
+  handleChatTextChange = (event) => {
+    this.setState({ message: event.target.value});
   }
 
   render() {
     return (
       <div>
-        <ul
-          id="messages"
-        >
-          {this.state.data.map(msg =>
-            <li>{msg}</li>
+        <div id="messages">
+          {this.state.data.map((msg,index) =>
+            <div key={index}>{msg}</div>
           )}
-        </ul>
+        </div>
         <form >
-          <input
-            onChange={(event) => this.setState({ message: event.target.value})}
+          <input className="form-control chatText" placeholder="Say something.."
+            onChange={this.handleChatTextChange} value={this.state.message}
             id="m"
           />
           <button
-            onClick={ ()=> this.sendChat() }
-            type="button"
+            onClick={this.sendChat}
+            type="submit"
           >
             Send
           </button>
