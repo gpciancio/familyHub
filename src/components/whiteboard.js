@@ -14,6 +14,7 @@ class Whiteboard extends React.Component {
     this.handleTouchDown = this.handleTouchDown.bind(this);
     this.handleTouchMove = this.handleTouchMove.bind(this);
     this.handleMouseUp = this.handleMouseUp.bind(this);
+    this.clear = this.clear.bind(this);
   }
 
   componentDidMount() {
@@ -62,7 +63,6 @@ class Whiteboard extends React.Component {
   }
 
   handleMouseMove(mouseEvent) {
-    console.log(mouseEvent);
     if (!this.state.isDrawing) {
       return;
     }
@@ -78,17 +78,21 @@ class Whiteboard extends React.Component {
     this.setState({ isDrawing: false });
   }
 
+  clear() {
+    this.setState({ lines: new Immutable.List() });
+  }
+
   relativeCoordinatesForEvent(event,type) {
     const boundingRect = this.refs.drawArea.getBoundingClientRect();
     if(type==="click"){
       return new Immutable.Map({
-        x: event.clientX - boundingRect.left - 18,
-        y: event.clientY - boundingRect.top - 18,
+        x: event.clientX - boundingRect.left,
+        y: event.clientY - boundingRect.top,
       });
     } else if (type==="touch"){
       return new Immutable.Map({
-        x: event.touches[0].clientX - boundingRect.left - 18,
-        y: event.touches[0].clientY - boundingRect.top - 18,
+        x: event.touches[0].clientX - boundingRect.left,
+        y: event.touches[0].clientY - boundingRect.top,
       });
     }
   }
@@ -104,6 +108,10 @@ class Whiteboard extends React.Component {
         onMouseMove={this.handleMouseMove}
       >
         <Drawing lines={this.state.lines} />
+        <button className="clearButton" onClick={()=>this.clear()} type="button">
+
+          <img src="http://worldartsme.com/images/rubber-clipart-1.jpg" className="eraser"></img>
+        </button>
       </div>
     );
   }
