@@ -86,13 +86,13 @@ class Whiteboard extends React.Component {
     const boundingRect = this.refs.drawArea.getBoundingClientRect();
     if(type==="click"){
       return new Immutable.Map({
-        x: event.clientX - boundingRect.left - 18,
-        y: event.clientY - boundingRect.top - 18,
+        x: event.clientX - boundingRect.left,
+        y: event.clientY - boundingRect.top,
       });
     } else if (type==="touch"){
       return new Immutable.Map({
-        x: event.touches[0].clientX - boundingRect.left - 18,
-        y: event.touches[0].clientY - boundingRect.top - 18,
+        x: event.touches[0].clientX - boundingRect.left,
+        y: event.touches[0].clientY - boundingRect.top,
       });
     }
   }
@@ -109,7 +109,8 @@ class Whiteboard extends React.Component {
       >
         <Drawing lines={this.state.lines} />
         <button className="clearButton" onClick={()=>this.clear()} type="button">
-          <i className="fa fa-times"></i>
+
+          <img src="http://worldartsme.com/images/rubber-clipart-1.jpg" className="eraser"></img>
         </button>
       </div>
     );
