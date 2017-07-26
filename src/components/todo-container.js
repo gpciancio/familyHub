@@ -117,25 +117,30 @@ class TodoContainer extends React.Component {
   render() {
     return (
       <div id="todo-list-container">
-        <div>
-          <button className={this.state.todo ? "selected" : ""} disabled={this.state.todo} onClick={(index) => this.setState({
-            todo: !this.state.todo
-          })}>To Do</button>
-        <button className={!this.state.todo ? "selected" : ""} disabled={!this.state.todo} onClick={(index) => this.setState({
-            todo: !this.state.todo
-          })}>Grocery</button>
-
-          <div className="row">
-            <div className="col-md-3">
-              <TodoList todo={this.state.todo} items={this.state.todo
+        <div className="row">
+          <div className="col-md-12">
+            <button
+              className={this.state.todo ? "selected" : ""}
+              disabled={this.state.todo}
+              onClick={(index) => this.setState({todo: !this.state.todo})}
+            >To Do</button>
+            <button
+              className={!this.state.todo ? "selected" : ""}
+              disabled={!this.state.todo}
+              onClick={(index) => this.setState({todo: !this.state.todo})}
+            >Grocery</button>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <TodoList todo={this.state.todo} items={this.state.todo
                 ? this.state.todoitems
                 : this.state.groceryitems} onItemCompleted={this.markItemCompleted} onDeleteItem={this.handleDeleteItem}/>
-            </div>
           </div>
         </div>
 
         <form id="add-form" className="row">
-          <div className="col-sm-12">
+          <div>
             <div className="inline">
 
               <input type="text" className="form-control todoform" placeholder="Add an item..." onChange={this.handleTextChange} value={this.state.text}></input>
