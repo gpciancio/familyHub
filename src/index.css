@@ -30,15 +30,9 @@ body {
 .weather iframe {
   border-style: none;
   position: absolute;
-<<<<<<< HEAD
   height: 50vh;
   width: 30vw;
       margin-top: 4px
-=======
-  height: 100vh;
-  width: 15vw;
-  margin-top: 38px
->>>>>>> 34bfc329fa49727125af90e02a2fc1a4f0b8e8f5
 }
 
 
@@ -66,11 +60,6 @@ body {
 
 .drawArea {
   display: inline-block;
-<<<<<<< HEAD
-  border: 20px solid rgb(102,136,238);
-  border-radius: 10px;
-  background-color: rgb(227,233,255);
-=======
   background: rgba(255, 255, 255, 1);
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
@@ -79,7 +68,6 @@ body {
   background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
->>>>>>> 34bfc329fa49727125af90e02a2fc1a4f0b8e8f5
   width: 100%;
   height: 100%;
 }
