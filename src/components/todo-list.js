@@ -5,7 +5,7 @@ class TodoList extends React.Component {
 
   render() {
     return (
-      <ul
+      <div
         id="todo-list"
         >{this.props.items.map(item => (
           <TodoListItem
@@ -16,7 +16,7 @@ class TodoList extends React.Component {
             onItemCompleted={this.props.onItemCompleted} onDeleteItem={this.props.onDeleteItem}
           />
         ))}
-      </ul>
+      </div>
     )
   }
 

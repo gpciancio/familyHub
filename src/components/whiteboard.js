@@ -110,7 +110,7 @@ class Whiteboard extends React.Component {
         <Drawing lines={this.state.lines} />
         <button className="clearButton" onClick={()=>this.clear()} type="button">
 
-          <img src="http://worldartsme.com/images/rubber-clipart-1.jpg" alt="" className="eraser"></img>
+          <img src="http://worldartsme.com/images/rubber-clipart-1.jpg" alt="Clear" className="eraser"></img>
         </button>
       </div>
     );
@@ -126,7 +126,7 @@ function Drawing({ lines }) {
     </svg>
   );
 }
- 
+
 function DrawingLine({ line }) {
   const pathData = "M " +
     line

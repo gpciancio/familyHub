@@ -14,6 +14,7 @@ class Splash extends React.Component {
             <div className="form-group form-group-lg emailform text-center">
               <input
                 type="email"
+
                 className="paddingright form-control form-control-lg"
                 id="email"
                 placeholder="Enter Family Gmail" value={this.props.defaultEmail}
