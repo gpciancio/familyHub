@@ -5,6 +5,124 @@ body {
   touch-action: none;
 }
 
+/* Splash Page */
+.bigbutton  {
+  width: 300px !important;
+  margin-top: 20px;
+}
+
+.totalcontain {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.splash_container {
+  display: block;
+  width: 100%;
+  /*height: 100%;*/
+  z-index: 100;
+  background-image: url("./img/ipadfam.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.emailform {
+  font-size: 1.2em;
+}
+
+
+/*------------CSS for BIOs-----------*/
+
+
+.secondhalf {
+  z-index: 101;
+  position: relative;
+}
+
+.meet-the-team {
+  padding-top: 20px;
+}
+
+.title {
+  color: #222;
+  text-align: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+.title:after {
+  background: rgb(227,233,255);
+    content: "";
+    height: 8px;
+    left: 0;
+    margin: 15px auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 30px;
+    width: 94px;
+}
+
+#logo {
+  transition: transform 0.5s;
+  display: block;
+  margin: 25px auto 0px;
+}
+
+#logo:hover {
+  transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+}
+
+.content {
+  margin: 16px 50px;
+}
+
+.team-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  padding-bottom: 30px;
+}
+
+.team-item {
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+.team-item img {
+  border-radius: 2px;
+}
+
+.team-name {
+  font-size: 24px;
+  color: #383838;
+  -webkit-font-smoothing: antialiased;
+  -webkit-margin-before: 0.2em;
+}
+
+/* Calendar */
+
 .calendar {
   position: relative;
   height: 0;
@@ -89,27 +207,6 @@ body {
   border: 0px;
 }
 
-.splash_container {
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  background-image: url("./img/ipadfam.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-}
-
-.emailform {
-  font-size: 1.2em;
-}
-
 .line {
   text-decoration: line-through;
 }
@@ -117,11 +214,15 @@ body {
 .famhubtitle {
   display: block;
   margin: 5px 10px 50px 10px;
-  font-size: 2.2em;
+  font-size: 3.2em;
+  font-family: 'Exo', sans-serif;
 }
 
 .paddingright {
-  padding-right: 150px;
+  height: 35px !important;
+  overflow: visible !important;
+  width: 300px !important;
+  /*text-align: center;*/
 }
 
 .inline {
@@ -134,8 +235,8 @@ body {
   font-weight: 200;
   padding: 40px 10px;
   text-align: center;
-  color: black;
-  background-color: rgba(240, 248, 255, .9);
+  color: white;
+  background-color: rgba(240, 248, 255, .1);
   z-index: 1;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
@@ -235,215 +336,4 @@ body {
 
 .selected {
   font-weight: bold;
-}
-
-/*------------CSS for BIOs-----------*/
-
-/*body {
-  font-family: "source-sans-pro";
-  color: #383838;
-  background: #fff;
-  width: 75%;
-  margin: auto;
-  margin-top: 20px;
-  border-radius: 10px;
-}*/
-
-.meet-the-team {
-  padding-top: 20px;
-}
-
-.title {
-  color: #222;
-  text-align: center;
-  margin-top: 5px;
-  position: relative;
-}
-
-.title:after {
-  background: rgb(227,233,255);
-    content: "";
-    height: 8px;
-    left: 0;
-    margin: 15px auto;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 30px;
-    width: 94px;
-}
-
-#logo {
-  transition: transform 0.5s;
-  display: block;
-  margin: 25px auto 0px;
-}
-
-#logo:hover {
-  transform: rotate(10deg);
-  -webkit-transform: rotate(10deg);
-  transform-origin: 50% 50%;
-  -webkit-transform-origin: 50% 50%;
-}
-
-.content {
-  margin: 16px 50px;
-}
-
-.team-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-flex-flow: row wrap;
-  justify-content: center;
-  list-style: none;
-  padding-bottom: 30px;
-}
-
-.team-item {
-  margin: 10px;
-  width: 400px;
-  height: 400px;
-  margin-top: 10px;
-  text-align: center;
-
-  position: relative;
-
-  transition: transform 0.5s;
-}
-
-.team-item img {
-  border-radius: 2px;
-}
-
-.team-info {
-  padding: 20px;
-  margin-top: auto;
-  justify-content: center;
-  position: relative;
-  top: -51%;
-  transform: translateY(-50%);
-}
-
-.overlay {
-  background: rgba(227, 233, 255, 0.8);
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  left: 0;
-  display: none;
-
-  border-radius: 2px;
-}
-
-.team-name {
-  font-size: 24px;
-  color: #383838;
-  -webkit-font-smoothing: antialiased;
-
-  -webkit-margin-before: 0.2em;
-
-}
-
-.team-job {
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  font-style: italic;
-  color: #383838;
-}
-
-.team-bio {
-  font-size: 14px;
-  color: #383838;
-  -webkit-font-smoothing: antialiased;
-}
-
-.team-contact {
-  color: #383838;
-  -webkit-font-smoothing: antialiased;
-  -webkit-margin-before: 0.2em;
-}
-
-.team-contact a {
-	padding: 0 20px;
-	height: 45px;
-	line-height: 45px;
-  text-decoration: none;
-  color: #222;
-}
-
-.team-contact a:hover {
-  text-decoration: underline;
-}
-
-.effect a:hover,
-.effect a:focus {
-	outline: none;
-}
-
-.effect::before,
-.effect::after {
-	position: absolute;
-	width: 94px;
-	height: 2px;
-	content: '';
-	opacity: 0;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-	pointer-events: none;
-
-  background: linear-gradient(to right, rgba(122,122,122, 0), rgba(122,122,122, 0.75), rgba(122,122,122, 0));
-}
-
-.effect::before {
-	top: 0;
-	left: 0;
-	-webkit-transform: perspective(1px) rotate(90deg);
-	-moz-transform: perspective(1px) rotate(90deg);
-	transform: perspective(1px) rotate(90deg);
-  -webkit-backface-visibility: hidden;
-	-webkit-transform-origin: 0 0;
-	-moz-transform-origin: 0 0;
-	transform-origin: 0 0;
-}
-
-.effect::after {
-	right: 0;
-	bottom: 0;
-	-webkit-transform: perspective(1px) rotate(90deg);
-	-moz-transform: perspective(1px) rotate(90deg);
-	transform: perspective(1px) rotate(90deg);
-  -webkit-backface-visibility: hidden;
-	-webkit-transform-origin: 100% 0;
-	-moz-transform-origin: 100% 0;
-	transform-origin: 100% 0;
-}
-
-.effect:hover::before,
-.effect:hover::after,
-.effect:focus::before,
-.effect:focus::after {
-	opacity: 1;
-}
-
-.effect:hover::before,
-.effect:focus::before {
-	left: 50%;
-	-webkit-transform: rotate(0deg) translateX(-50%);
-	-moz-transform: rotate(0deg) translateX(-50%);
-	transform: rotate(0deg) translateX(-50%);
-}
-
-.effect:hover::after,
-.effect:focus::after {
-	right: 50%;
-	-webkit-transform: rotate(0deg) translateX(50%);
-	-moz-transform: rotate(0deg) translateX(50%);
-	transform: rotate(0deg) translateX(50%);
 }

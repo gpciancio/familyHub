@@ -5,10 +5,10 @@ class Splash extends React.Component {
   render() {
 
     return  this.props.showSplash ? (
-    <div>
+    <div className="totalcontain">
       <div className="splash_container">
         <div className="stage col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2 text-center">
-          <span className="famhubtitle">Welcome to Family Hub!</span>
+          <span className="famhubtitle">Family Hub</span>
           <form className="form-inline">
             <div className="form-group form-group-lg emailform text-center">
               <input
@@ -19,14 +19,19 @@ class Splash extends React.Component {
                 onChange={ (event) => this.props.updateEmailText(event.target.value) }
               ></input>
             </div>
+            <div>
             <button
               type="submit"
-              className="btn btn-default btn-lg"
+              className="bigbutton btn btn-default btn-lg"
               onClick={this.props.saveEmail}
             >Enter
             </button>
+            </div>
           </form>
         </div>
+        </div>
+        <div className='container secondhalf'>
+        <div className='row'>
         <div className="meet-the-team">
   <img id="logo" src="https://res.cloudinary.com/gus-armistead/image/upload/v1463048305/manager_3_svr2x7.png" alt="" width="70px"></img>
 
@@ -56,6 +61,8 @@ class Splash extends React.Component {
     </div>
     </div>
     </div>
+    </div>
+
     ) :
     null;
   }
