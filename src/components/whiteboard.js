@@ -14,6 +14,7 @@ class Whiteboard extends React.Component {
     this.handleTouchDown = this.handleTouchDown.bind(this);
     this.handleTouchMove = this.handleTouchMove.bind(this);
     this.handleMouseUp = this.handleMouseUp.bind(this);
+    this.clear = this.clear.bind(this);
   }
 
   componentDidMount() {
@@ -62,7 +63,6 @@ class Whiteboard extends React.Component {
   }
 
   handleMouseMove(mouseEvent) {
-    console.log(mouseEvent);
     if (!this.state.isDrawing) {
       return;
     }
@@ -76,6 +76,10 @@ class Whiteboard extends React.Component {
 
   handleMouseUp() {
     this.setState({ isDrawing: false });
+  }
+
+  clear() {
+    this.setState({ lines: new Immutable.List() });
   }
 
   relativeCoordinatesForEvent(event,type) {
@@ -104,6 +108,9 @@ class Whiteboard extends React.Component {
         onMouseMove={this.handleMouseMove}
       >
         <Drawing lines={this.state.lines} />
+        <button className="clearButton" onClick={()=>this.clear()} type="button">
+          <i className="fa fa-times"></i>
+        </button>
       </div>
     );
   }
