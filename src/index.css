@@ -58,6 +58,14 @@ body {
   height: 99.99%;
 }
 
+.clearButton {
+  font-size: 18px;
+  width:30px;
+  height:30px;
+  position: relative;
+  top: -35px;
+}
+
 .splash_container {
   position: fixed;
   padding: 0;
@@ -117,16 +125,16 @@ body {
 
 .form-control {
   display: inline;
-  width: auto;
   padding: 19px 0px;
 }
 
 .addButton {
-  margin-left: 3px;
-  border-radius: 2px;
+  position: relative;
+  top: -35px;
 }
 
 .todoform {
+  width: 15vw;
   padding-bottom: 18px;
   padding-left: 10px;
   padding-right: 3px;
