@@ -30,23 +30,44 @@ body {
 .weather iframe {
   border-style: none;
   position: absolute;
-  height: 100vh;
-  width: 15vw;
+  height: 50vh;
+  width: 30vw;
+  margin-top: 4px
 }
+
+
+/* whiteboard */
 
 .whiteboard {
   position: absolute;
-  width: 47vw;
-  height: 50vh;
+  width: 50vw;
+  height: 55vh;
   top: 49vh;
+  border-style: solid;
+  border-width: 77px 77px 97px 77px;
+  -moz-border-image: url(https://testdrive-archive.azurewebsites.net/performance/chalkboard/Images/Chalkboard.svg) 73 76 97 77 repeat;
+  -webkit-border-image: url(https://testdrive-archive.azurewebsites.net/performance/chalkboard/Images/Chalkboard.svg) 73 76 97 77 repeat;
+  -o-border-image: url(https://testdrive-archive.azurewebsites.net/performance/chalkboard/Images/Chalkboard.svg) 73 76 97 77 repeat;
+  border-image: url(https://testdrive-archive.azurewebsites.net/performance/chalkboard/Images/Chalkboard.svg) 73 76 97 77 repeat;
+}
+
+.eraser {
+  height: 40px;
+  width: 60px;
+  margin-left: -8px;
+  margin-top: -10px;
 }
 
 .drawArea {
-  /*box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);*/
   display: inline-block;
-  border: 20px solid #FFF7D7;
-  border-radius: 10px;
-  background-color: black;
+  background: rgba(255, 255, 255, 1);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
   width: 100%;
   height: 100%;
 }
@@ -58,11 +79,14 @@ body {
 }
 
 .clearButton {
-  font-size: 18px;
-  width:30px;
-  height:30px;
+  font-size: 0px;
+  width: 0px;
+  height: 0px;
   position: relative;
-  top: -35px;
+  top: -10px;
+  background-color: #F8F8F8;
+  border-style: none;
+  border: 0px;
 }
 
 .splash_container {
@@ -192,13 +216,14 @@ body {
 .path {
   fill: none;
   stroke-width: 3px;
-  stroke: white;
+  stroke: black;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
 
 
 /* Tabs */
+
 .react-tabs__tab {
   list-style: none;
   display: inline;
