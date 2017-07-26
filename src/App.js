@@ -4,6 +4,7 @@ import Calendar from './components/calendar';
 import Weather from './components/weather';
 import Whiteboard from './components/whiteboard';
 import TodoContainer from './components/todo-container';
+import Chat from './components/chat';
 
 class App extends Component {
   state = {
@@ -43,6 +44,7 @@ class App extends Component {
 
 
   render() {
+    console.log("rendering components");
     return (
       <div>
         <div id="splash" className="splash">
@@ -60,18 +62,20 @@ class App extends Component {
             email={this.state.email} emailInput={this.state.emailInput}
           />
         </div>
-          <div id="weather" className="weather">
-            <Weather />
-          </div>
+        <div id="weather" className="weather">
+          <Weather />
+        </div>
 
-          <div id="whiteboard" className="whiteboard">
-            <Whiteboard />
-          </div>
+        <div id="whiteboard" className="whiteboard">
+          <Whiteboard />
+        </div>
 
-          <div id="todo" className="todo">
-            <TodoContainer/>
-          </div>
-
+        <div id="todo" className="todo">
+          <TodoContainer/>
+        </div>
+        <div id="chat" className="chat">
+          <Chat />
+        </div>
       </div>
     );
   }
