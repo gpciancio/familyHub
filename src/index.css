@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   touch-action: none;
+  background-color: rgb(227,233,255);
 }
 
 /* Splash Page */
