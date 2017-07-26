@@ -16,7 +16,7 @@ class TodoListItem extends React.Component {
 
   render() {
     return (
-      <li>
+      <div>
         <i
           className={"fa " + (this.props.completed ? 'fa-dot-circle-o' : 'fa-circle-o')}
           onClick={this.markCompleted}
@@ -29,7 +29,7 @@ class TodoListItem extends React.Component {
           className="fa fa-times pull-right"
           onClick={this.deleteItem}>
         </i>
-      </li>
+      </div>
     );
   }
 
