@@ -30,6 +30,10 @@ class Splash extends React.Component {
             >Enter
             </button>
             </div>
+            <div className="splashbuttons">
+              <a className="splashbutton skip">Skip to App >></a>
+              <a className="splashbutton learnmore">Learn More</a>
+            </div>
           </form>
         </div>
         </div>
