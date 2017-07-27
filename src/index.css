@@ -8,11 +8,12 @@ body {
 
 /* Splash Page */
 .bigbutton  {
-  width: 300px !important;
-  margin-top: 20px;
+  height: 4.5rem;
+  width: 25rem !important;
+  margin-top: 2.5rem !important;
   background-color: rgb(102,140,217);
 }
-.introtext {
+.intyrotext {
   padding: 3px;
   padding-bottom: 30px;
   color: rgb(245,245,245);
@@ -21,6 +22,8 @@ body {
 }
 .introtextlg {
   font-size: 16px;
+  padding-top: 2rem;
+  padding-bottom: 3.5em;
 
 }
 .totalcontain {
@@ -231,15 +234,16 @@ body {
 
 .whiteboard {
   position: absolute;
+  bottom: 15px;
   width: 50vw;
   height: 55vh;
   top: 49vh;
   border-style: solid;
-  border-width: 77px 77px 97px 77px;
-  -moz-border-image: url(https://testdrive-archive.azurewebsites.net/performance/chalkboard/Images/Chalkboard.svg) 73 76 97 77 repeat;
-  -webkit-border-image: url(https://testdrive-archive.azurewebsites.net/performance/chalkboard/Images/Chalkboard.svg) 73 76 97 77 repeat;
-  -o-border-image: url(https://testdrive-archive.azurewebsites.net/performance/chalkboard/Images/Chalkboard.svg) 73 76 97 77 repeat;
-  border-image: url(https://testdrive-archive.azurewebsites.net/performance/chalkboard/Images/Chalkboard.svg) 73 76 97 77 repeat;
+  border-width: 20px 20px 28px 20px;
+  -moz-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -webkit-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
 }
 
 .eraser {
@@ -292,9 +296,9 @@ body {
 }
 
 .paddingright {
-  height: 35px !important;
+  height: 4.5rem !important;
   overflow: visible !important;
-  width: 300px !important;
+  width: 25rem !important;
   /*text-align: center;*/
 }
 
@@ -302,6 +306,23 @@ body {
   display: inline;
 }
 
+
+.stage {
+  margin-top: 4.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+  padding-top: 110px;
+  padding-bottom: 95px;
+  text-align: center;
+  color: white;
+  background-color: rgba(240, 248, 255, .1);
+  z-index: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
 
 /* Todo list styling*/
 
