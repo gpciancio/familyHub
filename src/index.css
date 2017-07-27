@@ -18,7 +18,7 @@ body {
   padding-bottom: 30px;
   color: rgb(245,245,245);
   font-family: 'Open Sans', sans-serif;
-  margin: 0 125px;
+  margin: 0 110px;
 }
 .introtextlg {
   font-size: 16px;
@@ -46,13 +46,29 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
+
 }
 
 .stage {
-  margin-top: 170px;
+  margin-top: 12rem;
   font-size: 1.4rem;
   font-weight: 200;
-  padding: 110px 10px 25px;
+  padding: 90px 20px 25px;
+  text-align: center;
+  color: white;
+  background-color: rgba(240, 248, 255, .1);
+  z-index: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.stage2 {
+  margin-top: 12rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+  padding: 90px 20px 25px;
   text-align: center;
   color: white;
   background-color: rgba(240, 248, 255, .1);
@@ -75,6 +91,9 @@ body {
   margin-left: 65px;
 }
 
+.backtologin {
+}
+
 .splashbuttons {
   margin-top: 70px;
 }
@@ -88,57 +107,38 @@ body {
   color: rgb(245,245,245);
 }
 
-
-/*------------CSS for BIOs-----------*/
+/* Learn More */
 
 
 .secondhalf {
   z-index: 101;
-  position: relative;
 }
 
 .meet-the-team {
   padding-top: 20px;
+  /*width: 380px;*/
+  margin: auto;
 }
 
 .title {
-  color: #222;
+  color: rgb(245,245,245);
+  /*color: #222;*/
   text-align: center;
   margin-top: 5px;
   position: relative;
 }
 
-.title:after {
-  background: rgb(227,233,255);
-    content: "";
-    height: 8px;
-    left: 0;
-    margin: 15px auto;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 30px;
-    width: 94px;
-}
-
-#logo {
-  transition: transform 0.5s;
-  display: block;
-  margin: 25px auto 0px;
-}
-
-#logo:hover {
-  transform: rotate(10deg);
-  -webkit-transform: rotate(10deg);
-  transform-origin: 50% 50%;
-  -webkit-transform-origin: 50% 50%;
+.aboutfam {
+  margin-bottom: 10px;
+    margin-top: -25px;
 }
 
 .content {
-  margin: 16px 50px;
+  /*margin: 16px 20px;*/
 }
 
 .team-container {
+  padding: 0px 20px 20px 20px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -147,13 +147,26 @@ body {
   -webkit-flex-flow: row wrap;
   justify-content: center;
   list-style: none;
-  padding-bottom: 30px;
+  margin-bottom: -45px;
+}
+
+.featurelist {
+  padding-top: 15px;
+  text-align: left;
+  margin-left: 30px;
+
+}
+
+.copytext{
+  margin-top: 20px;
+  display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+
 }
 
 .team-item {
   margin: 10px;
-  width: 400px;
-  height: 400px;
   margin-top: 10px;
   text-align: center;
   position: relative;
@@ -161,12 +174,14 @@ body {
 }
 
 .team-item img {
+  max-width: 70px;
+  max-height: 70px;
   border-radius: 2px;
 }
 
 .team-name {
-  font-size: 24px;
-  color: #383838;
+  font-size: 14px;
+    color: rgb(245,245,245);
   -webkit-font-smoothing: antialiased;
   -webkit-margin-before: 0.2em;
 }
@@ -290,7 +305,7 @@ body {
 
 .famhubtitle {
   display: block;
-  margin: 5px 10px 50px 10px;
+  margin: -15px 10px 50px 10px;
   font-size: 4.5em;
   font-family: 'Exo', sans-serif;
 }
@@ -306,23 +321,6 @@ body {
   display: inline;
 }
 
-
-.stage {
-  margin-top: 4.5rem;
-  margin-bottom: 2.5rem;
-  font-size: 1.4rem;
-  font-weight: 200;
-  padding-top: 110px;
-  padding-bottom: 95px;
-  text-align: center;
-  color: white;
-  background-color: rgba(240, 248, 255, .1);
-  z-index: 1;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-}
 
 /* Todo list styling*/
 
@@ -425,4 +423,73 @@ body {
 
 .selected {
   font-weight: bold;
+}
+
+
+/* Media Queries */
+/* Ipad in Landscape*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .stage {
+    margin-top: 90px;
+    font-size: 1.4rem;
+    font-weight: 200;
+    padding: 90px 20px 25px;
+    text-align: center;
+    color: white;
+    background-color: rgba(240, 248, 255, .1);
+    z-index: 1;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  }
+
+
+  .stage2 {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    font-weight: 200;
+    padding: 90px 20px 30px;
+    text-align: center;
+    color: white;
+    background-color: rgba(240, 248, 255, .1);
+    z-index: 1;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+/* Chicken  */
+
+
+.chicken {
+  position: absolute;
+  top: 66vh;
+  left: 43vw;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  opacity: 1;
+  visibility: hidden;
+}
+
+
+/* The element to apply the animation to */
+.chicken.show {
+    transform: translate(0, -50px);
+    animation-name: chickenRun;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    visibility: visible;
+}
+
+.chickimg {
+  max-width: 250px;
+  max-height: 250px;
 }
