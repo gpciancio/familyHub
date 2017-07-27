@@ -7,11 +7,12 @@ body {
 
 /* Splash Page */
 .bigbutton  {
-  width: 300px !important;
-  margin-top: 20px;
+  height: 4.5rem;
+  width: 25rem !important;
+  margin-top: 2.5rem !important;
   background-color: rgb(102,140,217);
 }
-.introtext {
+.intyrotext {
   padding: 3px;
   padding-bottom: 30px;
   color: rgb(245,245,245);
@@ -20,6 +21,8 @@ body {
 }
 .introtextlg {
   font-size: 16px;
+  padding-top: 2rem;
+  padding-bottom: 3.5em;
 
 }
 .totalcontain {
@@ -231,9 +234,9 @@ body {
 }
 
 .paddingright {
-  height: 35px !important;
+  height: 4.5rem !important;
   overflow: visible !important;
-  width: 300px !important;
+  width: 25rem !important;
   /*text-align: center;*/
 }
 
@@ -242,10 +245,12 @@ body {
 }
 
 .stage {
-  margin-top: 170px;
+  margin-top: 4.5rem;
+  margin-bottom: 2.5rem;
   font-size: 1.4rem;
   font-weight: 200;
-  padding: 110px 10px;
+  padding-top: 110px;
+  padding-bottom: 95px;
   text-align: center;
   color: white;
   background-color: rgba(240, 248, 255, .1);
