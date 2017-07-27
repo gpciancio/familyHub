@@ -245,10 +245,7 @@ body {
 }
 
 .shadow {
-  box-shadow: 0 3px 6px rgba(0,0,0,.25);
-  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-  border: 2px solid rgba(0,0,0,.25);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 
