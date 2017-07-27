@@ -118,7 +118,7 @@ class TodoContainer extends React.Component {
     return (
       <div id="todo-list-container">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-sm-12">
             <button
               className={this.state.todo ? "selected" : ""}
               disabled={this.state.todo}
@@ -132,27 +132,22 @@ class TodoContainer extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-sm-12">
             <TodoList todo={this.state.todo} items={this.state.todo
                 ? this.state.todoitems
                 : this.state.groceryitems} onItemCompleted={this.markItemCompleted} onDeleteItem={this.handleDeleteItem}/>
           </div>
         </div>
-
-        <form id="add-form" className="row">
-          <div>
-            <div className="inline">
-
-              <input type="text" className="form-control todoform" placeholder="Add an item..." onChange={this.handleTextChange} value={this.state.text}></input>
-
+        <div className="row">
+          <div className="col-sm-12">
+            <form id="add-form">
+              <input type="text" className="form-control todoText" placeholder="Add an item..." onChange={this.handleTextChange} value={this.state.text}></input>
               <button className="addButton" type="submit" onClick={this.handleAddItem} disabled={!this.state.text}>
                 <i className="fa fa-plus"></i>
               </button>
-
-            </div>
-
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     )
   }
