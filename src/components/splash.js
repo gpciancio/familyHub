@@ -4,6 +4,18 @@ class Splash extends React.Component {
 
   render() {
 
+<<<<<<< HEAD
+    return  this.props.showSplash ? (
+    <div className="totalcontain">
+      <div className="splash_container">
+        <div className="stage col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2 text-center">
+          <span className="famhubtitle">Family Hub</span>
+          <div className='introtextlg introtext'>{"Google Calendar integration requires your family's Gmail account"}</div>
+          <form className="form-inline">
+            <div className="form-group form-group-lg emailform text-center">
+              <input
+                type="email"
+=======
     return  (this.props.showSplash ? (this.props.showLearnMore ?
       (
         <div className="totalcontain">
@@ -13,6 +25,7 @@ class Splash extends React.Component {
               <div className='row'>
                 <div className="meet-the-team">
                   <img id="logo" src="https://res.cloudinary.com/gus-armistead/image/upload/v1463048305/manager_3_svr2x7.png" alt="" width="70px"></img>
+>>>>>>> e1d234814e15b490ef84a34e8d32960fbd5258bb
 
                   <h1 className="title our-team">Our Team</h1>
 
