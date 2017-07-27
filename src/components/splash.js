@@ -21,11 +21,13 @@ class Splash extends React.Component {
                       </span>
 
                       <ul className="featurelist">
-                        <li>integration with google calendar</li>
-                        <li>a whiteboard</li>
-                        <li>a to do list and grocery list</li>
-                        <li>a weather app</li>
-                        <li>a messenging component</li>
+
+                        <li>Google Calendar integration</li>
+                        <li>Family Whiteboard</li>
+                        <li>Family To Do list and Grocery List</li>
+                        <li>Weather app with 4 day forecast</li>
+                        <li>Family Hub Instant Messaging</li>
+
                       </ul>
 
                     </div>
