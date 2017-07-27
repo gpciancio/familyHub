@@ -9,7 +9,7 @@ class Splash extends React.Component {
       <div className="splash_container">
         <div className="stage col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2 text-center">
           <span className="famhubtitle">Family Hub</span>
-          <div className='introtextlg introtext'>Google Calendar integration requires your families Gmail account:</div>
+          <div className='introtextlg introtext'>{"Google Calendar integration requires your family's Gmail account"}</div>
           <form className="form-inline">
             <div className="form-group form-group-lg emailform text-center">
               <input
