@@ -6,6 +6,7 @@ class TodoListItem extends React.Component {
      this.markCompleted = this.markCompleted.bind(this);
      this.deleteItem = this.deleteItem.bind(this);
    }
+   
    markCompleted(event) {
      this.props.onItemCompleted(this.props.id);
    }
