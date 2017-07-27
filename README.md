@@ -6,9 +6,9 @@ Every day many busy families start their day unprepared or unorganized and must 
 
 Family Hub believes in the five P’s: Proper Preparation Prevents Poor Performance.  We have created a Hub for families to not only sync calendars, but have the ability to maintain  to-do/grocery lists, white board notes for each other and know what the weather’s like outside.  With all this information provided in one place (we suggest mounting an older model iPad on your fridge) to get a good idea of how the day will look for the entire family.  
 
-Family Hub’s strength is derived from Google Calendar and Weather.com API’s and powered by React Native, CSS/Bootstrap, Node to provide a single page application hub for your family.
+Family Hub’s strength is derived from Google Calendar and Powr.io iFrames and powered by React, Socket.io, CSS/Bootstrap, Express/Node to provide a single page application hub for your family.
 
-A user simply enters in ther family's Google username and it will load their calendar.  If your family enjoys sharing their calendars they will also populate.  The weather API will request for user to share location for acurate up to date weather displayed on their device.
+A user simply enters in ther family's Google username and it will load their calendar.  If your family enjoys sharing their calendars they will also populate.  The weather widget will allow for user to change location for acurate up to date weather displayed on their device.  Family Hub Instant chat works everywhere while connected.
 
 # Links:
 
