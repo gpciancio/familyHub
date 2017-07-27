@@ -25,7 +25,7 @@ class Splash extends React.Component {
             <div>
             <button
               type="submit"
-              className="bigbutton btn btn-lg btn-default"
+              className="bigbutton btn btn-default btn-lg"
               onClick={this.props.saveEmail}
             >Enter
             </button>
