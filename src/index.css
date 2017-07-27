@@ -36,7 +36,6 @@ body {
 .splash_container {
   display: block;
   width: 100%;
-  /*height: 100%;*/
   z-index: 100;
   background-image: url("./img/ipadfam.jpg");
   background-size: cover;
@@ -46,8 +45,44 @@ body {
   width: 100vw;
 }
 
+.stage {
+  margin-top: 170px;
+  font-size: 1.4rem;
+  font-weight: 200;
+  padding: 110px 10px 25px;
+  text-align: center;
+  color: white;
+  background-color: rgba(240, 248, 255, .1);
+  z-index: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
 .emailform {
   font-size: 1.2em;
+}
+
+.skip {
+  margin-right: 65px;
+}
+
+.learnmore {
+  margin-left: 65px;
+}
+
+.splashbuttons {
+  margin-top: 70px;
+}
+
+.splashbutton {
+  cursor: pointer;
+  color: rgb(245,245,245);
+}
+
+.splashbutton:hover {
+  color: rgb(245,245,245);
 }
 
 
@@ -151,6 +186,32 @@ body {
   height: 50vh;
 }
 
+.backhome {
+  position: absolute;
+  z-index: 5;
+  left: 250px;
+  top: 0px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  background-color: rgb(102,140,217);
+}
+
+.backhome:link {
+  background-color: rgb(78, 122, 213) !important;
+}
+
+.backhome:visited {
+  background-color: rgb(78, 122, 213) !important;
+}
+
+.backhome:hover {
+  background-color: rgb(78, 122, 213) !important;
+}
+
+.backhome:active {
+  background-color: rgb(78, 122, 213) !important;
+}
+
 .weather {
   position: absolute;
   top: -3px;
@@ -239,21 +300,6 @@ body {
 
 .inline {
   display: inline;
-}
-
-.stage {
-  margin-top: 170px;
-  font-size: 1.4rem;
-  font-weight: 200;
-  padding: 110px 10px;
-  text-align: center;
-  color: white;
-  background-color: rgba(240, 248, 255, .1);
-  z-index: 1;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
 }
 
 

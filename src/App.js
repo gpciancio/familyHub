@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     email: "familyhub123@gmail.com",
     showSplash: true,
-    emailInput: false
+    showLearnMore: false
   }
 
   componentDidMount = () => {
@@ -22,8 +22,21 @@ class App extends Component {
   }
 
   saveEmail = () => {
-    this.setState({showSplash: false, emailInput: true});
+    this.setState({emailInput: true});
     this.saveState();
+    this.goToApp();
+  }
+
+  goToLearnMore = () => {
+    this.setState({showSplash: true, showLearnMore: true});
+  }
+
+  goToHome = () => {
+    this.setState({showSplash: true, showLearnMore: false});
+  }
+
+  goToApp = () => {
+    this.setState({showSplash: false, showLearnMore: false});
   }
 
   saveState = () => {
@@ -51,15 +64,20 @@ class App extends Component {
           <Splash
             defaultEmail={this.state.email}
             showSplash={this.state.showSplash}
+            showLearnMore={this.state.showLearnMore}
             updateEmailText={this.updateEmailText}
             saveEmail={this.saveEmail}
+            goToHome={this.goToHome}
+            goToLearnMore={this.goToLearnMore}
+            goToApp={this.goToApp}
           />
         </div>
 
 
         <div id="calendar" className="calendar">
           <Calendar
-            email={this.state.email} emailInput={this.state.emailInput}
+            email={this.state.email}
+            goToHome={this.goToHome}
           />
         </div>
         <div id="weather" className="weather">
