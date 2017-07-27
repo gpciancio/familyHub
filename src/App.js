@@ -10,8 +10,7 @@ class App extends Component {
   state = {
     email: "familyhub123@gmail.com",
     showSplash: true,
-    showLearnMore: false,
-    emailInput: false
+    showLearnMore: false
   }
 
   componentDidMount = () => {
@@ -78,7 +77,7 @@ class App extends Component {
         <div id="calendar" className="calendar">
           <Calendar
             email={this.state.email}
-            emailInput={this.state.emailInput}
+            goToHome={this.goToHome}
           />
         </div>
         <div id="weather" className="weather">

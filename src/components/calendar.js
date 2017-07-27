@@ -6,14 +6,18 @@ class Calendar extends React.Component {
     var mailinput = this.props.email.replace("@", "%40");
     var iframeSrc =
     "https://calendar.google.com/calendar/embed?showPrint=0&src=" + mailinput;
-    return this.props.emailInput ? (
+
+    return (
       <div>
-        <button className="backhome btn btn-default btn-lg">
+        <button
+          className="backhome btn btn-default btn-lg"
+          onClick={this.props.goToHome}
+        >
           Back to Login
         </button>
-      <iframe src={iframeSrc} title="Calendar" width="800" height="600" ></iframe>
+        <iframe src={iframeSrc} title="Calendar" width="800" height="600" ></iframe>
       </div>
-    ) : null;
+    )
   }
 }
 
