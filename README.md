@@ -16,5 +16,5 @@ Wireframes: https://github.com/gpciancio/familyHub/blob/master/wireframes/FHWire
 
 Waffle.io: https://waffle.io/gpciancio/familyHub
 
-Heroku Deplooyed: https://family-hub.herokuapp.com/
+Heroku Deplooyed: https://familyhub.herokuapp.com/
 
