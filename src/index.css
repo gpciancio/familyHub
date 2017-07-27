@@ -404,3 +404,34 @@ body {
 .selected {
   font-weight: bold;
 }
+
+
+/* Chicken  */
+
+
+.chicken {
+  position: absolute;
+  top: 66vh;
+  left: 43vw;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  opacity: 1;
+  visibility: hidden;
+}
+
+
+/* The element to apply the animation to */
+.chicken.show {
+    transform: translate(0, -50px);
+    animation-name: chickenRun;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    visibility: visible;
+}
+
+.chickimg {
+  max-width: 250px;
+  max-height: 250px;
+}

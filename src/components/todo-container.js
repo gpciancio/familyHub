@@ -9,8 +9,10 @@ class TodoContainer extends React.Component {
       todoitems: [],
       groceryitems: [],
       todo: true,
-      text: ""
+      text: "",
     };
+
+    this.chickenRef = null;
 
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleAddItem = this.handleAddItem.bind(this);
@@ -76,9 +78,12 @@ class TodoContainer extends React.Component {
   markItemCompleted(itemId) {
     if (this.state.todo) {
       var updatedItems = this.state.todoitems.map(item => {
-        if (itemId === item.id)
+        if (itemId === item.id){
           item.done = !item.done;
-
+          if(item.done){
+            this.props.showChicken();
+          }
+        }
         return item;
       })
     } else {
@@ -152,5 +157,7 @@ class TodoContainer extends React.Component {
     )
   }
 }
+
+
 
 export default TodoContainer;
