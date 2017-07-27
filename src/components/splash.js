@@ -13,7 +13,7 @@ class Splash extends React.Component {
                 <div className='secondhalf'>
                   <div className='row'>
                     <h3 className="title aboutfam">About FamilyHub</h3>
-                    <iframe title="demo" width="300" height="167" src="https://www.youtube.com/embed/UGpDEiuGVzI" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="demo" width="300" height="167" src="https://www.youtube.com/embed/UGpDEiuGVzI" frameBorder="0" allowFullScreen></iframe>
                     <div className='appcopy'>
                       <span className="copytext">
                         Family Hub is your one stop for organizing family events and keeping your household running smoothly. Features include:
@@ -22,7 +22,7 @@ class Splash extends React.Component {
 
                       <ul className="featurelist">
                         <li>integration with google calendar</li>
-                        <li>a chalkboard</li>
+                        <li>a whiteboard</li>
                         <li>a to do list and grocery list</li>
                         <li>a weather app</li>
                         <li>a messenging component</li>
