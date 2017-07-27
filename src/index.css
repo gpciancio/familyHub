@@ -185,6 +185,32 @@ body {
   height: 50vh;
 }
 
+.backhome {
+  position: absolute;
+  z-index: 5;
+  left: 250px;
+  top: 0px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  background-color: rgb(102,140,217);
+}
+
+.backhome:link {
+  background-color: rgb(78, 122, 213) !important;
+}
+
+.backhome:visited {
+  background-color: rgb(78, 122, 213) !important;
+}
+
+.backhome:hover {
+  background-color: rgb(78, 122, 213) !important;
+}
+
+.backhome:active {
+  background-color: rgb(78, 122, 213) !important;
+}
+
 .weather {
   position: absolute;
   top: -3px;
