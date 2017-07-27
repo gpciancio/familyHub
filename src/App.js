@@ -6,6 +6,7 @@ import Whiteboard from './components/whiteboard';
 import TodoContainer from './components/todo-container';
 import Chat from './components/chat';
 import Chicken from './components/chicken';
+// import Game from './components/game';
 
 class App extends Component {
   state = {
@@ -110,6 +111,10 @@ class App extends Component {
     );
   }
 }
+
+// <div>
+//   <Game/>
+// </div>
 
 
 
