@@ -79,7 +79,7 @@ class App extends Component {
           />
         </div>
 
-        <div id="calendar" className="calendar">
+        <div id="calendar" className="calendar shadow">
           <Calendar
             email={this.state.email}
             goToHome={this.goToHome}
@@ -98,7 +98,7 @@ class App extends Component {
             showChicken={this.showChicken}
           />
         </div>
-        <div id="chat" className="chat">
+        <div id="chat" className="chat shadow">
           <Chat />
         </div>
         <div id="chicken">
