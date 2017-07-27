@@ -14,7 +14,7 @@ body {
   background-color: rgb(102,140,217);
 }
 .introtext {
-  padding-bottom: 10px;
+  padding-top: 5px;
   color: rgb(245,245,245);
   font-family: 'Open Sans', sans-serif;
   margin: 0 110px;
@@ -48,7 +48,7 @@ body {
 }
 
 .stage {
-  margin-top: 9.5rem;
+  margin-top: 9rem;
   font-size: 1.4rem;
   font-weight: 200;
   padding: 60px 20px 25px;
@@ -63,7 +63,7 @@ body {
 }
 
 .stage2 {
-  margin-top: 9.5rem;
+  margin-top: 9rem;
   font-size: 1.4rem;
   font-weight: 200;
   padding: 70px 20px 25px;
@@ -90,7 +90,7 @@ body {
 }
 
 .splashbuttons {
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .splashbutton {
