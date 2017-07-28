@@ -10,10 +10,10 @@ class Calendar extends React.Component {
     return (
       <div>
         <button
-          className="backhome"
+          className="backhome btn btn-default"
           onClick={this.props.goToHome}
         >
-          Home
+          Logout
         </button>
         <iframe src={iframeSrc} title="Calendar" width="800" height="600" ></iframe>
       </div>

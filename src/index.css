@@ -199,20 +199,14 @@ html, body {
 div .backhome {
   position: relative;
   z-index: 5;
-  left: 200px;
-  top: 3vh;
-  width: 32.8571px;
-  height: 15px;
-  font-size: 13px;
-  color: rgb(34,0,204);
+  left: 208px;
+  top: 0;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  font-family: 'Arial',sans-serif;
+  color: rgb(102,136,238);
   background-color: rgb(232, 238, 247);
-  padding-top: 4px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  box-sizing: content-box;
-  border-radius: 2px;
-  border: none;
 }
 
 .weather {
@@ -240,6 +234,14 @@ div .backhome {
   top: 51vh;
   border-radius: 5px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fam {
+  z-index: 50;
+  font-family: 'Permanent Marker', cursive;
+  position: absolute;
+  text-align: center;
+  font-size: 37px;
 }
 
 .eraser {
