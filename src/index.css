@@ -197,8 +197,9 @@ div .backhome {
   color: rgb(102, 136, 238);
   position: relative;
   z-index: 5;
+  left:28vw;
+  width:200px;
   display: block;
-  margin: -39px 10px 50px 10px;
   font-size: 2.5em;
   font-family: 'Exo', sans-serif;
 text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);}
@@ -231,8 +232,8 @@ div .backhome {
   z-index: 50;
   left: 200px;
   top: 4px;
-  width: 70px;
-  height: 35px;
+  width: 0px;
+  height: 0px;
   font-size: 14px;
   font-family: 'Arial', sans-serif;
   color: rgb(102, 136, 238);
