@@ -5,13 +5,16 @@ import Weather from './components/weather';
 import Whiteboard from './components/whiteboard';
 import TodoContainer from './components/todo-container';
 import Chat from './components/chat';
+import Chicken from './components/chicken';
 
 class App extends Component {
   state = {
     email: "familyhub123@gmail.com",
     showSplash: true,
-    emailInput: false
+    showLearnMore: false,
+    showChicken: false
   }
+
 
   componentDidMount = () => {
     this.loadState();
@@ -22,8 +25,21 @@ class App extends Component {
   }
 
   saveEmail = () => {
-    this.setState({showSplash: false, emailInput: true});
+    this.setState({emailInput: true});
     this.saveState();
+    this.goToApp();
+  }
+
+  goToLearnMore = () => {
+    this.setState({showSplash: true, showLearnMore: true});
+  }
+
+  goToHome = () => {
+    this.setState({showSplash: true, showLearnMore: false});
+  }
+
+  goToApp = () => {
+    this.setState({showSplash: false, showLearnMore: false});
   }
 
   saveState = () => {
@@ -42,24 +58,31 @@ class App extends Component {
    return;
  }
 
+ showChicken = () => {
+   this.setState({showChicken: true});
+   setTimeout(() => this.setState({showChicken: false}), 660)
+ }
 
   render() {
-    console.log("rendering components");
     return (
       <div>
         <div id="splash" className="splash">
           <Splash
             defaultEmail={this.state.email}
             showSplash={this.state.showSplash}
+            showLearnMore={this.state.showLearnMore}
             updateEmailText={this.updateEmailText}
             saveEmail={this.saveEmail}
+            goToHome={this.goToHome}
+            goToLearnMore={this.goToLearnMore}
+            goToApp={this.goToApp}
           />
         </div>
 
-
         <div id="calendar" className="calendar">
           <Calendar
-            email={this.state.email} emailInput={this.state.emailInput}
+            email={this.state.email}
+            goToHome={this.goToHome}
           />
         </div>
         <div id="weather" className="weather">
@@ -71,10 +94,17 @@ class App extends Component {
         </div>
 
         <div id="todo" className="todo">
-          <TodoContainer/>
+          <TodoContainer
+            showChicken={this.showChicken}
+          />
         </div>
         <div id="chat" className="chat">
           <Chat />
+        </div>
+        <div id="chicken">
+          <Chicken
+            show={this.state.showChicken}
+          />
         </div>
       </div>
     );
