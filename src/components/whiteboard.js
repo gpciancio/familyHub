@@ -6,7 +6,9 @@ class Whiteboard extends React.Component {
     super(props);
     this.state = {
       lines: new Immutable.List(),
-      isDrawing: false
+      isDrawing: false,
+      start: false
+
     };
 
     this.handleMouseDown = this.handleMouseDown.bind(this);
@@ -34,7 +36,8 @@ class Whiteboard extends React.Component {
 
     this.setState(prevState => ({
       lines: prevState.lines.push(new Immutable.List([point])),
-      isDrawing: true
+      isDrawing: true,
+      start: true
     }));
 
   }
@@ -58,7 +61,8 @@ class Whiteboard extends React.Component {
 
     this.setState(prevState => ({
       lines: prevState.lines.push(new Immutable.List([point])),
-      isDrawing: true
+      isDrawing: true,
+      start: true
     }));
   }
 
@@ -107,6 +111,7 @@ class Whiteboard extends React.Component {
         onMouseDown={this.handleMouseDown}
         onMouseMove={this.handleMouseMove}
       >
+        {!this.state.start ? (<span className="fam">Welcome to Family Hub!!</span>):null}
         <Drawing lines={this.state.lines} />
         <button className="clearButton" onClick={()=>this.clear()} type="button">
 
