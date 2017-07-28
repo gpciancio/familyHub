@@ -125,12 +125,12 @@ class TodoContainer extends React.Component {
         <div className="row">
           <div className="col-sm-12">
             <button
-              className={this.state.todo ? "selected" : ""}
+              className={this.state.todo ? "selected btn btn-default todobutton" : "btn btn-default todobutton"}
               disabled={this.state.todo}
               onClick={(index) => this.setState({todo: !this.state.todo})}
             >To Do</button>
             <button
-              className={!this.state.todo ? "selected" : ""}
+              className={!this.state.todo ? "selected btn btn-default todobutton" : "btn btn-default todobutton"}
               disabled={!this.state.todo}
               onClick={(index) => this.setState({todo: !this.state.todo})}
             >Grocery</button>

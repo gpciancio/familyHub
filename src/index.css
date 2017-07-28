@@ -5,19 +5,22 @@ html, body {
   padding: 0;
   font-family: 'Exo', sans-serif;
   touch-action: none;
-  background-color: rgb(227,233,255);
+  background-color: rgb(227, 233, 255);
 }
 
+
 /* Splash Page */
-.bigbutton  {
+
+.bigbutton {
   height: 4.5rem;
   width: 25rem !important;
   margin-top: 2.5rem !important;
-  background-color: rgb(102,140,217);
+  background-color: rgb(102, 140, 217);
 }
+
 .introtext {
   padding-top: 5px;
-  color: rgb(245,245,245);
+  color: rgb(245, 245, 245);
   font-family: 'Open Sans', sans-serif;
   margin: 0 110px;
 }
@@ -96,14 +99,16 @@ html, body {
 
 .splashbutton {
   cursor: pointer;
-  color: rgb(245,245,245);
+  color: rgb(245, 245, 245);
 }
 
 .splashbutton:hover {
-  color: rgb(245,245,245);
+  color: rgb(245, 245, 245);
 }
 
+
 /* Learn More */
+
 .secondhalf {
   z-index: 101;
 }
@@ -114,7 +119,7 @@ html, body {
 }
 
 .title {
-  color: rgb(245,245,245);
+  color: rgb(245, 245, 245);
   text-align: center;
   margin-top: -5px;
   position: relative;
@@ -122,7 +127,7 @@ html, body {
 
 .aboutfam {
   margin-bottom: 10px;
-    margin-top: -25px;
+  margin-top: -25px;
 }
 
 .team-container {
@@ -144,7 +149,7 @@ html, body {
   margin-left: 30px;
 }
 
-.copytext{
+.copytext {
   margin-top: 20px;
   display: block;
   margin-left: 50px;
@@ -167,12 +172,36 @@ html, body {
 
 .team-name {
   font-size: 14px;
-    color: rgb(245,245,245);
+  color: rgb(245, 245, 245);
   -webkit-font-smoothing: antialiased;
   -webkit-margin-before: 0.2em;
 }
 
+
 /* Calendar */
+
+div .backhome {
+  position: relative;
+  z-index: 5;
+  left: 200px;
+  top: 4px;
+  width: 70px;
+  height: 35px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: rgb(102, 136, 238);
+  background-color: rgb(232, 238, 247);
+}
+
+.famhubtitlemain {
+  color: rgb(102, 136, 238);
+  position: relative;
+  z-index: 5;
+  display: block;
+  margin: -39px 10px 50px 10px;
+  font-size: 2.5em;
+  font-family: 'Exo', sans-serif;
+text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);}
 
 .calendar {
   position: relative;
@@ -182,7 +211,6 @@ html, body {
   overflow: hidden;
   padding-bottom: 50vh;
   border: none;
-
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -196,22 +224,9 @@ html, body {
   border-radius: 10px;
 }
 
-div .backhome {
-  position: relative;
-  z-index: 5;
-  left: 208px;
-  top: 0;
-  width: 100px;
-  height: 40px;
-  font-size: 18px;
-  font-family: 'Arial',sans-serif;
-  color: rgb(102,136,238);
-  background-color: rgb(232, 238, 247);
-}
-
 .weather {
   position: absolute;
-  top:-1vh;
+  top: -1vh;
   left: 87vw;
 }
 
@@ -220,8 +235,8 @@ div .backhome {
   position: absolute;
   height: 100vh;
   width: 13vw;
-
 }
+
 
 /* whiteboard */
 
@@ -240,6 +255,7 @@ div .backhome {
   z-index: 50;
   font-family: 'Permanent Marker', cursive;
   position: absolute;
+  left: 25%;
   text-align: center;
   font-size: 37px;
 }
@@ -252,14 +268,12 @@ div .backhome {
 }
 
 .drawArea {
-
   border-style: solid;
   border-width: 20px 20px 28px 20px;
   -moz-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
   -webkit-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
   -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
   border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-
   background: rgba(255, 255, 255, 1);
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
@@ -300,6 +314,70 @@ div .backhome {
   font-family: 'Exo', sans-serif;
 }
 
+
+/* Family Hub Effects */
+
+span.fhletter {
+  display: inline-block;
+  transform-origin: 50% 70%;
+}
+
+span.fhletter:nth-child(1) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) both, fadeIn .15s both;
+}
+
+span.fhletter:nth-child(2) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .2s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(3) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .25s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(4) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .3s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(5) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .35s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(6) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .4s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(7) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .45s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(8) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .5s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(9) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .55s both, fadeIn 1s both;
+}
+
+@keyframes flipper {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  ;
+  to {
+    opacity: 1
+  }
+  ;
+}
+
 .paddingright {
   height: 4.5rem !important;
   overflow: visible !important;
@@ -309,6 +387,7 @@ div .backhome {
 .inline {
   display: inline;
 }
+
 
 /* Todo list styling*/
 
@@ -356,6 +435,40 @@ div .backhome {
   border-radius: 10px;
 }
 
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  cursor: auto;
+}
+
+.todobutton:link {
+  color: rgb(102, 136, 238) !important;
+  background-color: rgb(232, 238, 247);
+}
+
+.todobutton:visited {
+  color: rgb(102, 136, 238) !important;
+  background-color: rgb(232, 238, 247);
+}
+
+.todobutton:hover {
+  color: rgb(102, 136, 238) !important;
+  background-color: #ced5eb !important;
+}
+
+.todobutton:active {
+  color: rgb(102, 136, 238) !important;
+  background-color: rgb(232, 238, 247);
+}
+
+.todobutton {
+  color: rgb(102, 136, 238);
+  background-color: rgb(232, 238, 247);
+}
+
+.selected {
+  font-weight: bold;
+  background-color: #ced5eb;
+}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
@@ -376,8 +489,9 @@ div .backhome {
 
 .chatIn {
   left: 1vw;
-  width:14vw;
+  width: 14vw;
 }
+
 
 /* whiteboard styling */
 
@@ -399,6 +513,14 @@ div .backhome {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+.underline {
+  height: 3px;
+  background-color: black;
+  color: black;
+  margin-top: -2px;
+}
+
+
 /* Tabs */
 
 .react-tabs__tab {
@@ -409,16 +531,13 @@ div .backhome {
   cursor: pointer;
 }
 
-.selected {
-  font-weight: bold;
-}
 
 /* Media Queries */
+
+
 /* Ipad in Landscape*/
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .stage {
     margin-top: 90px;
     font-size: 1.4rem;
@@ -433,8 +552,6 @@ and (orientation : landscape) {
     -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
   }
-
-
   .stage2 {
     margin-top: 15px;
     font-size: 1.4rem;
@@ -451,6 +568,7 @@ and (orientation : landscape) {
   }
 }
 
+
 /* Chicken  */
 
 .chicken {
@@ -465,13 +583,15 @@ and (orientation : landscape) {
   visibility: hidden;
 }
 
+
 /* The element to apply the animation to */
+
 .chicken.show {
-    transform: translate(0, -50px);
-    animation-name: chickenRun;
-    animation-duration: .5s;
-    animation-timing-function: ease;
-    visibility: visible;
+  transform: translate(0, -50px);
+  animation-name: chickenRun;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  visibility: visible;
 }
 
 .chickimg {
