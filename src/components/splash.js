@@ -13,7 +13,7 @@ class Splash extends React.Component {
                 <div className='secondhalf'>
                   <div className='row'>
                     <h3 className="title aboutfam">About FamilyHub</h3>
-                    <iframe title="demo" width="300" height="167" src="https://www.youtube.com/embed/UGpDEiuGVzI" frameborder="0" allowfullscreen></iframe>
+                    <iframe title="demo" width="300" height="167" src="https://www.youtube.com/embed/UGpDEiuGVzI" frameBorder="0" allowFullScreen></iframe>
                     <div className='appcopy'>
                       <span className="copytext">
                         Family Hub is your one stop for organizing family events and keeping your household running smoothly. Features include:
@@ -21,11 +21,13 @@ class Splash extends React.Component {
                       </span>
 
                       <ul className="featurelist">
-                        <li>integration with google calendar</li>
-                        <li>a chalkboard</li>
-                        <li>a to do list and grocery list</li>
-                        <li>a weather app</li>
-                        <li>a messenging component</li>
+
+                        <li>Google Calendar integration</li>
+                        <li>Family Whiteboard</li>
+                        <li>Family To Do list and Grocery List</li>
+                        <li>Weather app with 4 day forecast</li>
+                        <li>Family Hub Instant Messaging</li>
+
                       </ul>
 
                     </div>
@@ -71,8 +73,20 @@ class Splash extends React.Component {
           <div className="totalcontain">
             <div className="splash_container">
               <div className="stage col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2 text-center">
-                <span className="famhubtitle">Family Hub</span>
-                <div className='introtextlg introtext'>Google Calendar integration requires your {"family's"} Gmail account:</div>
+                <div className="famhubtitle">
+                  <span className="fhletter">F</span>
+                  <span className="fhletter">a</span>
+                  <span className="fhletter">m</span>
+                  <span className="fhletter">i</span>
+                  <span className="fhletter">l</span>
+                  <span className="fhletter">y
+                  </span>
+                  <span className="fhletter">H</span>
+                  <span className="fhletter">u</span>
+                  <span className="fhletter">b</span>
+                </div>
+                <div className='introtextlg introtext'>Google Calendar integration requires your {"family's "}
+                  Gmail account:</div>
                 <form className="form-inline">
                   <div className="form-group form-group-lg emailform text-center">
                     <input type="email" className="paddingright form-control form-control-lg" id="email" placeholder="Enter Family Gmail" value={this.props.defaultEmail} onChange={(event) => this.props.updateEmailText(event.target.value)}></input>
@@ -83,18 +97,12 @@ class Splash extends React.Component {
                     </button>
                   </div>
                   <div className="splashbuttons">
-                    <a className="splashbutton skip" onClick={this.props.goToApp}>Skip to App >></a>
+                  <a className="splashbutton skip" onClick={this.props.goToApp}>Skip to App >></a>
                     <a className="splashbutton learnmore" onClick={this.props.goToLearnMore}>Learn More</a>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-        )
-      )
-      : null
-      )
-      }
-    }
-
-    export default Splash;
+   )):null)}}
+   export default Splash;

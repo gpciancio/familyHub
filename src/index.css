@@ -1,31 +1,35 @@
-body {
+html, body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Exo', sans-serif;
   touch-action: none;
-  background-color: rgb(227,233,255);
+  background-color: rgb(227, 233, 255);
 }
 
+
 /* Splash Page */
-.bigbutton  {
+
+.bigbutton {
   height: 4.5rem;
   width: 25rem !important;
   margin-top: 2.5rem !important;
-  background-color: rgb(102,140,217);
+  background-color: rgb(102, 140, 217);
 }
-.intyrotext {
-  padding: 3px;
-  padding-bottom: 30px;
-  color: rgb(245,245,245);
+
+.introtext {
+  padding-top: 5px;
+  color: rgb(245, 245, 245);
   font-family: 'Open Sans', sans-serif;
   margin: 0 110px;
 }
+
 .introtextlg {
   font-size: 16px;
-  padding-top: 2rem;
-  padding-bottom: 3.5em;
-
+  padding-bottom: 2.4em;
 }
+
 .totalcontain {
   display: block;
   position: fixed;
@@ -38,7 +42,6 @@ body {
 
 .splash_container {
   display: block;
-  width: 100%;
   z-index: 100;
   background-image: url("./img/ipadfam.jpg");
   background-size: cover;
@@ -46,14 +49,13 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
-
 }
 
 .stage {
-  margin-top: 12rem;
+  margin-top: 9rem;
   font-size: 1.4rem;
   font-weight: 200;
-  padding: 90px 20px 25px;
+  padding: 60px 20px 25px;
   text-align: center;
   color: white;
   background-color: rgba(240, 248, 255, .1);
@@ -65,10 +67,10 @@ body {
 }
 
 .stage2 {
-  margin-top: 12rem;
+  margin-top: 9rem;
   font-size: 1.4rem;
   font-weight: 200;
-  padding: 90px 20px 25px;
+  padding: 70px 20px 25px;
   text-align: center;
   color: white;
   background-color: rgba(240, 248, 255, .1);
@@ -91,24 +93,21 @@ body {
   margin-left: 65px;
 }
 
-.backtologin {
-}
-
 .splashbuttons {
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .splashbutton {
   cursor: pointer;
-  color: rgb(245,245,245);
+  color: rgb(245, 245, 245);
 }
 
 .splashbutton:hover {
-  color: rgb(245,245,245);
+  color: rgb(245, 245, 245);
 }
 
-/* Learn More */
 
+/* Learn More */
 
 .secondhalf {
   z-index: 101;
@@ -116,25 +115,19 @@ body {
 
 .meet-the-team {
   padding-top: 20px;
-  /*width: 380px;*/
   margin: auto;
 }
 
 .title {
-  color: rgb(245,245,245);
-  /*color: #222;*/
+  color: rgb(245, 245, 245);
   text-align: center;
-  margin-top: 5px;
+  margin-top: -5px;
   position: relative;
 }
 
 .aboutfam {
   margin-bottom: 10px;
-    margin-top: -25px;
-}
-
-.content {
-  /*margin: 16px 20px;*/
+  margin-top: -25px;
 }
 
 .team-container {
@@ -154,15 +147,13 @@ body {
   padding-top: 15px;
   text-align: left;
   margin-left: 30px;
-
 }
 
-.copytext{
+.copytext {
   margin-top: 20px;
   display: block;
   margin-left: 50px;
   margin-right: 50px;
-
 }
 
 .team-item {
@@ -181,67 +172,69 @@ body {
 
 .team-name {
   font-size: 14px;
-    color: rgb(245,245,245);
+  color: rgb(245, 245, 245);
   -webkit-font-smoothing: antialiased;
   -webkit-margin-before: 0.2em;
 }
 
+
 /* Calendar */
+
+div .backhome {
+  position: relative;
+  z-index: 5;
+  left: 200px;
+  top: 4px;
+  width: 70px;
+  height: 35px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: rgb(102, 136, 238);
+  background-color: rgb(232, 238, 247);
+}
+
+.famhubtitlemain {
+  color: rgb(102, 136, 238);
+  position: relative;
+  z-index: 5;
+  display: block;
+  margin: -39px 10px 50px 10px;
+  font-size: 2.5em;
+  font-family: 'Exo', sans-serif;
+text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);}
 
 .calendar {
   position: relative;
   height: 0;
+  width: 69.5vw;
+  left: 17vw;
   overflow: hidden;
-  padding-bottom: 60vh;
+  padding-bottom: 50vh;
+  border: none;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .calendar iframe {
   border-style: none;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -0.1vw;
   width: 70vw;
   height: 50vh;
-}
-
-.backhome {
-  position: absolute;
-  z-index: 5;
-  left: 250px;
-  top: 0px;
-  padding-top: 7px;
-  padding-bottom: 8px;
-  background-color: rgb(102,140,217);
-}
-
-.backhome:link {
-  background-color: rgb(78, 122, 213) !important;
-}
-
-.backhome:visited {
-  background-color: rgb(78, 122, 213) !important;
-}
-
-.backhome:hover {
-  background-color: rgb(78, 122, 213) !important;
-}
-
-.backhome:active {
-  background-color: rgb(78, 122, 213) !important;
+  border-radius: 10px;
 }
 
 .weather {
   position: absolute;
-  top: -3px;
-  left: 70vw;
+  top: -1vh;
+  left: 87vw;
 }
 
 .weather iframe {
   border-style: none;
   position: absolute;
-  height: 50vh;
-  width: 30vw;
-  margin-top: 4px
+  height: 100vh;
+  width: 13vw;
 }
 
 
@@ -250,15 +243,21 @@ body {
 .whiteboard {
   position: absolute;
   bottom: 15px;
-  width: 50vw;
-  height: 55vh;
-  top: 49vh;
-  border-style: solid;
-  border-width: 20px 20px 28px 20px;
-  -moz-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-  -webkit-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-  -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-  border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  width: 49vw;
+  left: 17vw;
+  height: 48vh;
+  top: 51vh;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fam {
+  z-index: 50;
+  font-family: 'Permanent Marker', cursive;
+  position: absolute;
+  left: 25%;
+  text-align: center;
+  font-size: 37px;
 }
 
 .eraser {
@@ -269,7 +268,12 @@ body {
 }
 
 .drawArea {
-  display: inline-block;
+  border-style: solid;
+  border-width: 20px 20px 28px 20px;
+  -moz-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -webkit-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
   background: rgba(255, 255, 255, 1);
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
@@ -310,11 +314,74 @@ body {
   font-family: 'Exo', sans-serif;
 }
 
+
+/* Family Hub Effects */
+
+span.fhletter {
+  display: inline-block;
+  transform-origin: 50% 70%;
+}
+
+span.fhletter:nth-child(1) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) both, fadeIn .15s both;
+}
+
+span.fhletter:nth-child(2) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .2s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(3) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .25s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(4) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .3s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(5) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .35s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(6) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .4s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(7) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .45s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(8) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .5s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(9) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .55s both, fadeIn 1s both;
+}
+
+@keyframes flipper {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  ;
+  to {
+    opacity: 1
+  }
+  ;
+}
+
 .paddingright {
   height: 4.5rem !important;
   overflow: visible !important;
   width: 25rem !important;
-  /*text-align: center;*/
 }
 
 .inline {
@@ -324,28 +391,19 @@ body {
 
 /* Todo list styling*/
 
-.form-control {
-  display: inline;
-  padding: 19px 0px;
-}
-
-.addButton {
-
-}
-
 .todoText {
   width: 18vw;
 }
 
 #todo-list-container {
   position: absolute;
-  width: 22.4vw;
-  height: 50vh;
-  top: 50vh;
-  left: 47.5vw;
+  width: 20vw;
+  height: 48vh;
+  top: 51vh;
+  left: 66.5vw;
   border-radius: 5px;
   background: rgb(227, 233, 255);
-  /*box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);*/
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   text-align: center;
@@ -355,7 +413,7 @@ body {
   display: inline-block;
   font-size: 1.2em;
   text-align: left;
-  width: 21vw;
+  width: 18vw;
 }
 
 #add-form {
@@ -377,6 +435,40 @@ body {
   border-radius: 10px;
 }
 
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  cursor: auto;
+}
+
+.todobutton:link {
+  color: rgb(102, 136, 238) !important;
+  background-color: rgb(232, 238, 247);
+}
+
+.todobutton:visited {
+  color: rgb(102, 136, 238) !important;
+  background-color: rgb(232, 238, 247);
+}
+
+.todobutton:hover {
+  color: rgb(102, 136, 238) !important;
+  background-color: #ced5eb !important;
+}
+
+.todobutton:active {
+  color: rgb(102, 136, 238) !important;
+  background-color: rgb(232, 238, 247);
+}
+
+.todobutton {
+  color: rgb(102, 136, 238);
+  background-color: rgb(232, 238, 247);
+}
+
+.selected {
+  font-weight: bold;
+  background-color: #ced5eb;
+}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
@@ -389,10 +481,16 @@ body {
 }
 
 #messages {
-  height: 40vh;
+  left: 1vw;
+  width: 14vw;
+  height: 90vh;
   overflow-y: scroll;
 }
 
+.chatIn {
+  left: 1vw;
+  width: 14vw;
+}
 
 
 /* whiteboard styling */
@@ -407,9 +505,21 @@ body {
 
 .chat {
   position: absolute;
-  left: 70vw;
-  top: 50vh;
+  left: 0.5vw;
+  top: 0.5vh;
+  width: 16vw;
+  height: 98.5vh;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+.underline {
+  height: 3px;
+  background-color: black;
+  color: black;
+  margin-top: -2px;
+}
+
 
 /* Tabs */
 
@@ -421,17 +531,13 @@ body {
   cursor: pointer;
 }
 
-.selected {
-  font-weight: bold;
-}
-
 
 /* Media Queries */
+
+
 /* Ipad in Landscape*/
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .stage {
     margin-top: 90px;
     font-size: 1.4rem;
@@ -446,8 +552,6 @@ and (orientation : landscape) {
     -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
   }
-
-
   .stage2 {
     margin-top: 15px;
     font-size: 1.4rem;
@@ -464,29 +568,30 @@ and (orientation : landscape) {
   }
 }
 
-/* Chicken  */
 
+/* Chicken  */
 
 .chicken {
   position: absolute;
-  top: 66vh;
-  left: 43vw;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+  top: 62.09vh;
+  left: 73vw;
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
   opacity: 1;
   visibility: hidden;
 }
 
 
 /* The element to apply the animation to */
+
 .chicken.show {
-    transform: translate(0, -50px);
-    animation-name: chickenRun;
-    animation-duration: .5s;
-    animation-timing-function: ease;
-    visibility: visible;
+  transform: translate(0, -50px);
+  animation-name: chickenRun;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  visibility: visible;
 }
 
 .chickimg {
