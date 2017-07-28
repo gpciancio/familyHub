@@ -13,7 +13,7 @@ class Splash extends React.Component {
                 <div className='secondhalf'>
                   <div className='row'>
                     <h3 className="title aboutfam">About FamilyHub</h3>
-                    <iframe title="demo" width="300" height="167" src="https://www.youtube.com/embed/UGpDEiuGVzI" frameBorder="0" allowFullScreen></iframe>
+                    <iframe title="demo" width="300" height="167" src="https://www.youtube.com/embed/-M_m1iRIRmU" frameBorder="0" allowFullScreen></iframe>
                     <div className='appcopy'>
                       <span className="copytext">
                         Family Hub is your one stop for organizing family events and keeping your household running smoothly. Features include:
