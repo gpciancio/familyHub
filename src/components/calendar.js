@@ -15,6 +15,19 @@ class Calendar extends React.Component {
         >
           Logout
         </button>
+
+        <div className="famhubtitlemain text-center">
+          <span className="fhletter">F</span>
+          <span className="fhletter">a</span>
+          <span className="fhletter">m</span>
+          <span className="fhletter">i</span>
+          <span className="fhletter">l</span>
+          <span className="fhletter">y
+          </span>
+          <span className="fhletter">H</span>
+          <span className="fhletter">u</span>
+          <span className="fhletter">b</span>
+        </div>
         <iframe src={iframeSrc} title="Calendar" width="800" height="600" ></iframe>
       </div>
     )
