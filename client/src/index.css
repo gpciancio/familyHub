@@ -372,6 +372,7 @@ div .backhome {
   width: 14vw;
   height: 90vh;
   overflow-y: scroll;
+  overflow-wrap: break-word;
 }
 
 .chatIn {
