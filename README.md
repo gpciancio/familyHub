@@ -22,24 +22,24 @@ YouTube Demo: https://www.youtube.com/watch?v=-M_m1iRIRmU
 
 # Family Hub Retrospective
 
-Went Well:  	Team Synergy tight plethora of skills
+*Went Well:*  		Team Synergy tight plethora of skills
 			Handled our pivots well quick
 			Strategy and Execution solid
 			Strong Wireframes and upfront research
 			Paired and mob programing
 
-Went Not So Well:  Web socket Deployment
-				Learning new tech while in development
-				Learned git hub component flow slowly
+*Went Not So Well:* 	Web socket Deployment
+			Learning new tech while in development
+			Learned git hub component flow slowly
 				
+*Do moving forward:*	Git hub component branch flows
+			Research file structure prior to build
+			Implement epics in Waffle.io
+			Test driven development
+			
+*Stop doing:*		Allowing coding to prevent standup and stand down
+			Trying to have status meeting in public
 
-Do different moving forward:	Git hub component branch flows
-						Research file structure prior to build
-						Implement epics in Waffle.io
-						Test driven development
-Stop doing all together:	Allowing coding to prevent standup and stand down
-					Trying to have status meeting in public
-
-Things to try in future:	continue exploring with new technologies
-					build in time to refactor code
-					End User Development
+*Try in future:*	Continue exploring with new technologies
+			Build in time to refactor code
+			End User Development
