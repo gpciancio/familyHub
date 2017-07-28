@@ -258,7 +258,6 @@ div .backhome {
   -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
   border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
 
-  display: inline-block;
   background: rgba(255, 255, 255, 1);
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
@@ -454,7 +453,7 @@ and (orientation : landscape) {
 
 .chicken {
   position: absolute;
-  top: 64.5vh;
+  top: 62.09vh;
   left: 73vw;
   -webkit-transition: .7s;
   -moz-transition: .7s;
@@ -474,6 +473,6 @@ and (orientation : landscape) {
 }
 
 .chickimg {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 250px;
+  max-height: 250px;
 }
