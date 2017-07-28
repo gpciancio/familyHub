@@ -37,7 +37,8 @@ class Chat extends React.Component {
       <div>
         <div className="row">
           <div className="col-sm-12" id="messages">
-            <h3>Family Chat</h3>
+            <h3 className="text-center">Family Chat</h3>
+            <hr className="underline"></hr>
           {this.state.data.map((msg,index) =>
             <div key={index}>{msg}</div>
           )}

@@ -59,6 +59,8 @@ class App extends Component {
  }
 
  showChicken = () => {
+   let audio = new Audio("//www.google.com/logos/fnbx/animal_sounds/rooster.mp3");
+   audio.play();
    this.setState({showChicken: true});
    setTimeout(() => this.setState({showChicken: false}), 660)
  }
