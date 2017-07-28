@@ -194,6 +194,7 @@ div .backhome {
 }
 
 .famhubtitlemain {
+  cursor: pointer;
   color: rgb(102, 136, 238);
   position: relative;
   z-index: 5;
@@ -257,6 +258,7 @@ div .backhome {
 /* whiteboard */
 
 .whiteboard {
+  cursor: pointer;
   position: absolute;
   bottom: 15px;
   width: 49vw;
