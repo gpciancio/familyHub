@@ -60,7 +60,7 @@ class App extends Component {
 
  showChicken = () => {
    this.setState({showChicken: true});
-   setTimeout(() => this.setState({showChicken: false}), 300)
+   setTimeout(() => this.setState({showChicken: false}), 660)
  }
 
   render() {

@@ -1,7 +1,9 @@
-body {
+html, body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Exo', sans-serif;
   touch-action: none;
   background-color: rgb(227,233,255);
 }
@@ -37,7 +39,6 @@ body {
 
 .splash_container {
   display: block;
-  width: 100%;
   z-index: 100;
   background-image: url("./img/ipadfam.jpg");
   background-size: cover;
@@ -176,57 +177,56 @@ body {
 .calendar {
   position: relative;
   height: 0;
+  width: 69.5vw;
+  left: 17vw;
   overflow: hidden;
-  padding-bottom: 60vh;
+  padding-bottom: 50vh;
+  border: none;
+
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .calendar iframe {
   border-style: none;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -0.1vw;
   width: 70vw;
   height: 50vh;
+  border-radius: 10px;
 }
 
-.backhome {
-  position: absolute;
+div .backhome {
+  position: relative;
   z-index: 5;
-  left: 250px;
-  top: 0px;
-  padding-top: 7px;
-  padding-bottom: 8px;
-  background-color: rgb(102,140,217);
-}
-
-.backhome:link {
-  background-color: rgb(78, 122, 213) !important;
-}
-
-.backhome:visited {
-  background-color: rgb(78, 122, 213) !important;
-}
-
-.backhome:hover {
-  background-color: rgb(78, 122, 213) !important;
-}
-
-.backhome:active {
-  background-color: rgb(78, 122, 213) !important;
+  left: 200px;
+  top: 3vh;
+  width: 32.8571px;
+  height: 15px;
+  font-size: 13px;
+  color: rgb(34,0,204);
+  background-color: rgb(232, 238, 247);
+  padding-top: 4px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: content-box;
+  border-radius: 2px;
+  border: none;
 }
 
 .weather {
   position: absolute;
-  top: -3px;
-  left: 70vw;
+  top:-1vh;
+  left: 87vw;
 }
 
 .weather iframe {
   border-style: none;
   position: absolute;
-  height: 50vh;
-  width: 30vw;
-  margin-top: 4px
+  height: 100vh;
+  width: 13vw;
+
 }
 
 /* whiteboard */
@@ -234,15 +234,12 @@ body {
 .whiteboard {
   position: absolute;
   bottom: 15px;
-  width: 50vw;
-  height: 55vh;
-  top: 49vh;
-  border-style: solid;
-  border-width: 20px 20px 28px 20px;
-  -moz-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-  -webkit-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-  -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-  border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  width: 49vw;
+  left: 17vw;
+  height: 48vh;
+  top: 51vh;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .eraser {
@@ -253,7 +250,14 @@ body {
 }
 
 .drawArea {
-  display: inline-block;
+
+  border-style: solid;
+  border-width: 20px 20px 28px 20px;
+  -moz-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -webkit-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+
   background: rgba(255, 255, 255, 1);
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
@@ -306,23 +310,19 @@ body {
 
 /* Todo list styling*/
 
-.form-control {
-  display: inline;
-  padding: 19px 0px;
-}
-
 .todoText {
   width: 18vw;
 }
 
 #todo-list-container {
   position: absolute;
-  width: 22.4vw;
-  height: 50vh;
-  top: 50vh;
-  left: 47.5vw;
+  width: 20vw;
+  height: 48vh;
+  top: 51vh;
+  left: 66.5vw;
   border-radius: 5px;
   background: rgb(227, 233, 255);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   text-align: center;
@@ -332,7 +332,7 @@ body {
   display: inline-block;
   font-size: 1.2em;
   text-align: left;
-  width: 21vw;
+  width: 18vw;
 }
 
 #add-form {
@@ -366,8 +366,15 @@ body {
 }
 
 #messages {
-  height: 40vh;
+  left: 1vw;
+  width: 14vw;
+  height: 90vh;
   overflow-y: scroll;
+}
+
+.chatIn {
+  left: 1vw;
+  width:14vw;
 }
 
 /* whiteboard styling */
@@ -382,8 +389,12 @@ body {
 
 .chat {
   position: absolute;
-  left: 70vw;
-  top: 50vh;
+  left: 0.5vw;
+  top: 0.5vh;
+  width: 16vw;
+  height: 98.5vh;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Tabs */
@@ -442,12 +453,12 @@ and (orientation : landscape) {
 
 .chicken {
   position: absolute;
-  top: 66vh;
-  left: 43vw;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+  top: 62.09vh;
+  left: 73vw;
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
   opacity: 1;
   visibility: hidden;
 }
