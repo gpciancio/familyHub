@@ -46,19 +46,9 @@ class Chat extends React.Component {
         <div className="row">
 
         <form>
-          {/* <input className="form-control chatText" placeholder="Say something.."
-            onChange={this.handleChatTextChange} value={this.state.message}
-            id="m"
-          />
-          <button
-            onClick={this.sendChat}
-            type="submit"
-          >
-            Send
-          </button> */}
           <div className="col-sm-12">
-            <div className="input-group">
-              <input type="text" className="form-control" onChange={this.handleChatTextChange} value={this.state.message} placeholder="Search for..."/>
+            <div className="input-group chatIn">
+              <input type="text" className="form-control" onChange={this.handleChatTextChange} value={this.state.message} placeholder="Say something..."/>
               <span className="input-group-btn">
                 <button className="btn btn-default" onClick={this.sendChat} type="submit">Send</button>
               </span>

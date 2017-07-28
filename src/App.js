@@ -60,7 +60,7 @@ class App extends Component {
 
  showChicken = () => {
    this.setState({showChicken: true});
-   setTimeout(() => this.setState({showChicken: false}), 300)
+   setTimeout(() => this.setState({showChicken: false}), 660)
  }
 
   render() {
@@ -79,7 +79,7 @@ class App extends Component {
           />
         </div>
 
-        <div id="calendar" className="calendar shadow">
+        <div id="calendar" className="calendar">
           <Calendar
             email={this.state.email}
             goToHome={this.goToHome}
@@ -98,7 +98,7 @@ class App extends Component {
             showChicken={this.showChicken}
           />
         </div>
-        <div id="chat" className="chat shadow">
+        <div id="chat" className="chat">
           <Chat />
         </div>
         <div id="chicken">

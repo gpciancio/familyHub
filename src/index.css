@@ -1,7 +1,9 @@
-body {
+html, body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Exo', sans-serif;
   touch-action: none;
   background-color: rgb(227,233,255);
 }
@@ -13,19 +15,18 @@ body {
   margin-top: 2.5rem !important;
   background-color: rgb(102,140,217);
 }
-.intyrotext {
-  padding: 3px;
-  padding-bottom: 30px;
+.introtext {
+  padding-top: 5px;
   color: rgb(245,245,245);
   font-family: 'Open Sans', sans-serif;
   margin: 0 110px;
 }
+
 .introtextlg {
   font-size: 16px;
-  padding-top: 2rem;
-  padding-bottom: 3.5em;
-
+  padding-bottom: 2.4em;
 }
+
 .totalcontain {
   display: block;
   position: fixed;
@@ -38,7 +39,6 @@ body {
 
 .splash_container {
   display: block;
-  width: 100%;
   z-index: 100;
   background-image: url("./img/ipadfam.jpg");
   background-size: cover;
@@ -46,14 +46,13 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
-
 }
 
 .stage {
-  margin-top: 12rem;
+  margin-top: 9rem;
   font-size: 1.4rem;
   font-weight: 200;
-  padding: 90px 20px 25px;
+  padding: 60px 20px 25px;
   text-align: center;
   color: white;
   background-color: rgba(240, 248, 255, .1);
@@ -65,10 +64,10 @@ body {
 }
 
 .stage2 {
-  margin-top: 12rem;
+  margin-top: 9rem;
   font-size: 1.4rem;
   font-weight: 200;
-  padding: 90px 20px 25px;
+  padding: 70px 20px 25px;
   text-align: center;
   color: white;
   background-color: rgba(240, 248, 255, .1);
@@ -91,11 +90,8 @@ body {
   margin-left: 65px;
 }
 
-.backtologin {
-}
-
 .splashbuttons {
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .splashbutton {
@@ -108,33 +104,25 @@ body {
 }
 
 /* Learn More */
-
-
 .secondhalf {
   z-index: 101;
 }
 
 .meet-the-team {
   padding-top: 20px;
-  /*width: 380px;*/
   margin: auto;
 }
 
 .title {
   color: rgb(245,245,245);
-  /*color: #222;*/
   text-align: center;
-  margin-top: 5px;
+  margin-top: -5px;
   position: relative;
 }
 
 .aboutfam {
   margin-bottom: 10px;
     margin-top: -25px;
-}
-
-.content {
-  /*margin: 16px 20px;*/
 }
 
 .team-container {
@@ -154,7 +142,6 @@ body {
   padding-top: 15px;
   text-align: left;
   margin-left: 30px;
-
 }
 
 .copytext{
@@ -162,7 +149,6 @@ body {
   display: block;
   margin-left: 50px;
   margin-right: 50px;
-
 }
 
 .team-item {
@@ -191,79 +177,69 @@ body {
 .calendar {
   position: relative;
   height: 0;
+  width: 69.5vw;
+  left: 17vw;
   overflow: hidden;
   padding-bottom: 50vh;
+  border: none;
+
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .calendar iframe {
   border-style: none;
   position: absolute;
   top: 0;
-  left: 20vw;
+  left: -0.1vw;
   width: 70vw;
   height: 50vh;
+  border-radius: 10px;
 }
 
-.backhome {
-  position: absolute;
+div .backhome {
+  position: relative;
   z-index: 5;
-  left: 250px;
-  top: 0px;
-  padding-top: 7px;
-  padding-bottom: 8px;
-  background-color: rgb(102,140,217);
-}
-
-.backhome:link {
-  background-color: rgb(78, 122, 213) !important;
-}
-
-.backhome:visited {
-  background-color: rgb(78, 122, 213) !important;
-}
-
-.backhome:hover {
-  background-color: rgb(78, 122, 213) !important;
-}
-
-.backhome:active {
-  background-color: rgb(78, 122, 213) !important;
+  left: 200px;
+  top: 3vh;
+  width: 32.8571px;
+  height: 15px;
+  font-size: 13px;
+  color: rgb(34,0,204);
+  background-color: rgb(232, 238, 247);
+  padding-top: 4px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: content-box;
+  border-radius: 2px;
+  border: none;
 }
 
 .weather {
   position: absolute;
-  top: -3px;
-  left: 90vw;
+  top:-1vh;
+  left: 87vw;
 }
 
 .weather iframe {
   border-style: none;
   position: absolute;
   height: 100vh;
-  width: 10vw;
-  margin-top: 4px
-}
+  width: 13vw;
 
-.shadow {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
-
 
 /* whiteboard */
 
 .whiteboard {
   position: absolute;
   bottom: 15px;
-  width: 50vw;
-  left: 20vw;
-  height: 50vh;
-  top: 49vh;
-  border-style: solid;
-  border-width: 20px 20px 28px 20px;
-  -moz-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-  -webkit-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-  -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
-  border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  width: 49vw;
+  left: 17vw;
+  height: 48vh;
+  top: 51vh;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .eraser {
@@ -274,6 +250,14 @@ body {
 }
 
 .drawArea {
+
+  border-style: solid;
+  border-width: 20px 20px 28px 20px;
+  -moz-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -webkit-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+
   display: inline-block;
   background: rgba(255, 255, 255, 1);
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
@@ -319,19 +303,13 @@ body {
   height: 4.5rem !important;
   overflow: visible !important;
   width: 25rem !important;
-  /*text-align: center;*/
 }
 
 .inline {
   display: inline;
 }
 
-
 /* Todo list styling*/
-
-.addButton {
-
-}
 
 .todoText {
   width: 18vw;
@@ -340,9 +318,9 @@ body {
 #todo-list-container {
   position: absolute;
   width: 20vw;
-  height: 50vh;
-  top: 50vh;
-  left: 70vw;
+  height: 48vh;
+  top: 51vh;
+  left: 66.5vw;
   border-radius: 5px;
   background: rgb(227, 233, 255);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
@@ -389,11 +367,16 @@ body {
 }
 
 #messages {
-  height: 40vh;
+  left: 1vw;
+  width: 14vw;
+  height: 90vh;
   overflow-y: scroll;
 }
 
-
+.chatIn {
+  left: 1vw;
+  width:14vw;
+}
 
 /* whiteboard styling */
 
@@ -407,10 +390,12 @@ body {
 
 .chat {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 20vw;
-  height: 100vh;
+  left: 0.5vw;
+  top: 0.5vh;
+  width: 16vw;
+  height: 98.5vh;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Tabs */
@@ -426,7 +411,6 @@ body {
 .selected {
   font-weight: bold;
 }
-
 
 /* Media Queries */
 /* Ipad in Landscape*/
@@ -468,19 +452,17 @@ and (orientation : landscape) {
 
 /* Chicken  */
 
-
 .chicken {
   position: absolute;
-  top: 66vh;
-  left: 43vw;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+  top: 64.5vh;
+  left: 73vw;
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
   opacity: 1;
   visibility: hidden;
 }
-
 
 /* The element to apply the animation to */
 .chicken.show {
@@ -492,6 +474,6 @@ and (orientation : landscape) {
 }
 
 .chickimg {
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 200px;
+  max-height: 200px;
 }
