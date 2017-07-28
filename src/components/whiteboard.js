@@ -90,8 +90,8 @@ class Whiteboard extends React.Component {
     const boundingRect = this.refs.drawArea.getBoundingClientRect();
     if(type==="click"){
       return new Immutable.Map({
-        x: event.clientX - boundingRect.left,
-        y: event.clientY - boundingRect.top,
+        x: event.clientX - boundingRect.left - 20,
+        y: event.clientY - boundingRect.top - 20,
       });
     } else if (type==="touch"){
       return new Immutable.Map({
