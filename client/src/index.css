@@ -1,0 +1,619 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo', sans-serif;
+  touch-action: none;
+  background-color: rgb(227, 233, 255);
+}
+
+
+/* Splash Page */
+
+.bigbutton {
+  height: 4.5rem;
+  width: 25rem !important;
+  margin-top: 2.5rem !important;
+  background-color: rgb(102, 140, 217);
+}
+
+.introtext {
+  padding-top: 5px;
+  color: rgb(245, 245, 245);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 110px;
+}
+
+.introtextlg {
+  font-size: 16px;
+  padding-bottom: 2.4em;
+}
+
+.totalcontain {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.splash_container {
+  display: block;
+  z-index: 100;
+  background-image: url("./img/ipadfam.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.stage {
+  margin-top: 9rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+  padding: 60px 20px 25px;
+  text-align: center;
+  color: white;
+  background-color: rgba(240, 248, 255, .1);
+  z-index: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.stage2 {
+  margin-top: 9rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+  padding: 70px 20px 25px;
+  text-align: center;
+  color: white;
+  background-color: rgba(240, 248, 255, .1);
+  z-index: 1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.emailform {
+  font-size: 1.2em;
+}
+
+.skip {
+  margin-right: 65px;
+}
+
+.learnmore {
+  margin-left: 65px;
+}
+
+.splashbuttons {
+  margin-top: 40px;
+}
+
+.splashbutton {
+  cursor: pointer;
+  color: rgb(245, 245, 245);
+}
+
+.splashbutton:hover {
+  color: rgb(245, 245, 245);
+}
+
+
+/* Learn More */
+
+.secondhalf {
+  z-index: 101;
+}
+
+.meet-the-team {
+  padding-top: 20px;
+  margin: auto;
+}
+
+.title {
+  color: rgb(245, 245, 245);
+  text-align: center;
+  margin-top: -5px;
+  position: relative;
+}
+
+.aboutfam {
+  margin-bottom: 10px;
+  margin-top: -25px;
+}
+
+.team-container {
+  padding: 0px 20px 20px 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: -45px;
+}
+
+.featurelist {
+  padding-top: 15px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.copytext {
+  margin-top: 20px;
+  display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.team-item {
+  margin: 10px;
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+.team-item img {
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 2px;
+}
+
+.team-name {
+  font-size: 14px;
+  color: rgb(245, 245, 245);
+  -webkit-font-smoothing: antialiased;
+  -webkit-margin-before: 0.2em;
+}
+
+
+/* Calendar */
+
+div .backhome {
+  position: relative;
+  z-index: 5;
+  left: 200px;
+  top: 4px;
+  width: 70px;
+  height: 35px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: rgb(102, 136, 238);
+  background-color: rgb(232, 238, 247);
+}
+
+.famhubtitlemain {
+  cursor: pointer;
+  color: rgb(102, 136, 238);
+  position: relative;
+  z-index: 5;
+  left:28vw;
+  width:200px;
+  display: block;
+  font-size: 2.5em;
+  font-family: 'Exo', sans-serif;
+text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);}
+
+.calendar {
+  position: relative;
+  height: 0;
+  top: 0.5vh;
+  width: 69.5vw;
+  left: 17vw;
+  overflow: hidden;
+  padding-bottom: 49vh;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.calendar iframe {
+  border-style: none;
+  position: absolute;
+  top: 0;
+  left: -0.1vw;
+  width: 70vw;
+  height: 48vh;
+  border-radius: 10px;
+}
+
+div .backhome {
+  position: relative;
+  z-index: 50;
+  left: 200px;
+  top: 4px;
+  width: 0px;
+  height: 0px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: rgb(102, 136, 238);
+  background-color: rgb(232, 238, 247);
+}
+
+.weather {
+  position: absolute;
+  top: -1vh;
+  left: 87vw;
+}
+
+.weather iframe {
+  border-style: none;
+  position: absolute;
+  height: 100vh;
+  width: 13vw;
+}
+
+
+/* whiteboard */
+
+.whiteboard {
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  width: 49vw;
+  left: 17vw;
+  height: 48vh;
+  top: 51vh;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fam {
+  z-index: 50;
+  font-family: 'Permanent Marker', cursive;
+  position: absolute;
+  left: 25%;
+  text-align: center;
+  font-size: 37px;
+}
+
+.eraser {
+  height: 40px;
+  width: 60px;
+  margin-left: -8px;
+  margin-top: -10px;
+}
+
+.drawArea {
+  border-style: solid;
+  border-width: 20px 20px 28px 20px;
+  -moz-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -webkit-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  -o-border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  border-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/873/full/tileable-metal-textures-4.jpg") 27 32 32 31 stretch;
+  background: rgba(255, 255, 255, 1);
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+  width: 100%;
+  height: 100%;
+}
+
+.drawing {
+  display: inline-block;
+  width: 100%;
+  height: 99.99%;
+}
+
+.clearButton {
+  font-size: 0px;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  top: -10px;
+  background-color: #F8F8F8;
+  border-style: none;
+  border: 0px;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.famhubtitle {
+  display: block;
+  margin: -15px 10px 50px 10px;
+  font-size: 4.5em;
+  font-family: 'Exo', sans-serif;
+}
+
+
+/* Family Hub Effects */
+
+span.fhletter {
+  display: inline-block;
+  transform-origin: 50% 70%;
+}
+
+span.fhletter:nth-child(1) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) both, fadeIn .15s both;
+}
+
+span.fhletter:nth-child(2) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .2s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(3) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .25s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(4) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .3s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(5) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .35s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(6) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .4s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(7) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .45s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(8) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .5s both, fadeIn 1s both;
+}
+
+span.fhletter:nth-child(9) {
+  animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .55s both, fadeIn 1s both;
+}
+
+@keyframes flipper {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  ;
+  to {
+    opacity: 1
+  }
+  ;
+}
+
+.paddingright {
+  height: 4.5rem !important;
+  overflow: visible !important;
+  width: 25rem !important;
+}
+
+.inline {
+  display: inline;
+}
+
+
+/* Todo list styling*/
+
+.todoText {
+  width: 18vw;
+}
+
+#todo-list-container {
+  position: absolute;
+  width: 20vw;
+  height: 48vh;
+  top: 51vh;
+  left: 66.5vw;
+  border-radius: 5px;
+  background: rgb(227, 233, 255);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  text-align: center;
+}
+
+#todo-list, #add-form {
+  display: inline-block;
+  font-size: 1.2em;
+  text-align: left;
+  width: 18vw;
+}
+
+#add-form {
+  position: relative;
+  top: 5vh;
+}
+
+#todo-list {
+  height: 30vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
+}
+
+#todo-list li:hover {
+  color: #333333;
+  background: #efefef;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  cursor: auto;
+}
+
+.todobutton:link {
+  color: rgb(102, 136, 238) !important;
+  background-color: rgb(232, 238, 247);
+}
+
+.todobutton:visited {
+  color: rgb(102, 136, 238) !important;
+  background-color: rgb(232, 238, 247);
+}
+
+.todobutton:hover {
+  color: rgb(102, 136, 238) !important;
+  background-color: #ced5eb !important;
+}
+
+.todobutton:active {
+  color: rgb(102, 136, 238) !important;
+  background-color: rgb(232, 238, 247);
+}
+
+.todobutton {
+  color: rgb(102, 136, 238);
+  background-color: rgb(232, 238, 247);
+}
+
+.selected {
+  font-weight: bold;
+  background-color: #ced5eb;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+#messages {
+  left: 1vw;
+  width: 14vw;
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+}
+
+.chatIn {
+  left: 1vw;
+  width: 14vw;
+}
+
+
+/* whiteboard styling */
+
+.path {
+  fill: none;
+  stroke-width: 3px;
+  stroke: black;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.chat {
+  position: absolute;
+  left: 0.5vw;
+  top: 0.5vh;
+  width: 16vw;
+  height: 98.5vh;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.underline {
+  height: 3px;
+  background-color: black;
+  color: black;
+  margin-top: -2px;
+}
+
+
+/* Tabs */
+
+.react-tabs__tab {
+  list-style: none;
+  display: inline;
+  font-size: 1.3em;
+  margin: 8px;
+  cursor: pointer;
+}
+
+
+/* Media Queries */
+
+
+/* Ipad in Landscape*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .stage {
+    margin-top: 90px;
+    font-size: 1.4rem;
+    font-weight: 200;
+    padding: 90px 20px 25px;
+    text-align: center;
+    color: white;
+    background-color: rgba(240, 248, 255, .1);
+    z-index: 1;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  }
+  .stage2 {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    font-weight: 200;
+    padding: 90px 20px 30px;
+    text-align: center;
+    color: white;
+    background-color: rgba(240, 248, 255, .1);
+    z-index: 1;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+
+/* Chicken  */
+
+.chicken {
+  position: absolute;
+  top: 62.09vh;
+  left: 73vw;
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
+  opacity: 1;
+  visibility: hidden;
+}
+
+
+/* The element to apply the animation to */
+
+.chicken.show {
+  transform: translate(0, -50px);
+  animation-name: chickenRun;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  visibility: visible;
+}
+
+.chickimg {
+  max-width: 250px;
+  max-height: 250px;
+}

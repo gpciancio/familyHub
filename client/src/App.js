@@ -5,13 +5,16 @@ import Weather from './components/weather';
 import Whiteboard from './components/whiteboard';
 import TodoContainer from './components/todo-container';
 import Chat from './components/chat';
+import Chicken from './components/chicken';
 
 class App extends Component {
   state = {
     email: "familyhub123@gmail.com",
     showSplash: true,
-    showLearnMore: false
+    showLearnMore: false,
+    showChicken: false
   }
+
 
   componentDidMount = () => {
     this.loadState();
@@ -55,9 +58,14 @@ class App extends Component {
    return;
  }
 
+ showChicken = () => {
+   let audio = new Audio("//www.google.com/logos/fnbx/animal_sounds/rooster.mp3");
+   audio.play();
+   this.setState({showChicken: true});
+   setTimeout(() => this.setState({showChicken: false}), 660)
+ }
 
   render() {
-    console.log("rendering components");
     return (
       <div>
         <div id="splash" className="splash">
@@ -72,7 +80,6 @@ class App extends Component {
             goToApp={this.goToApp}
           />
         </div>
-
 
         <div id="calendar" className="calendar">
           <Calendar
@@ -89,17 +96,21 @@ class App extends Component {
         </div>
 
         <div id="todo" className="todo">
-          <TodoContainer/>
+          <TodoContainer
+            showChicken={this.showChicken}
+          />
         </div>
         <div id="chat" className="chat">
           <Chat />
+        </div>
+        <div id="chicken">
+          <Chicken
+            show={this.state.showChicken}
+          />
         </div>
       </div>
     );
   }
 }
-
-
-
 
 export default App;

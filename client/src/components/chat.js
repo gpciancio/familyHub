@@ -35,23 +35,28 @@ class Chat extends React.Component {
   render() {
     return (
       <div>
-        <div id="messages">
+        <div className="row">
+          <div className="col-sm-12" id="messages">
+            <h3 className="text-center">Family Chat</h3>
+            <hr className="underline"></hr>
           {this.state.data.map((msg,index) =>
             <div key={index}>{msg}</div>
           )}
+          </div>
         </div>
-        <form >
-          <input className="form-control chatText" placeholder="Say something.."
-            onChange={this.handleChatTextChange} value={this.state.message}
-            id="m"
-          />
-          <button
-            onClick={this.sendChat}
-            type="submit"
-          >
-            Send
-          </button>
-        </form>
+        <div className="row">
+
+        <form>
+          <div className="col-sm-12">
+            <div className="input-group chatIn">
+              <input type="text" className="form-control" onChange={this.handleChatTextChange} value={this.state.message} placeholder="Chat..."/>
+              <span className="input-group-btn">
+                <button className="btn btn-default" onClick={this.sendChat} type="submit">Send</button>
+              </span>
+            </div>
+          </div>
+          </form>
+        </div>
       </div>
     )
   }

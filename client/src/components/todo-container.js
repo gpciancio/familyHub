@@ -9,8 +9,10 @@ class TodoContainer extends React.Component {
       todoitems: [],
       groceryitems: [],
       todo: true,
-      text: ""
+      text: "",
     };
+
+    this.chickenRef = null;
 
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleAddItem = this.handleAddItem.bind(this);
@@ -76,9 +78,12 @@ class TodoContainer extends React.Component {
   markItemCompleted(itemId) {
     if (this.state.todo) {
       var updatedItems = this.state.todoitems.map(item => {
-        if (itemId === item.id)
+        if (itemId === item.id){
           item.done = !item.done;
-
+          if(item.done){
+            this.props.showChicken();
+          }
+        }
         return item;
       })
     } else {
@@ -120,12 +125,12 @@ class TodoContainer extends React.Component {
         <div className="row">
           <div className="col-sm-12">
             <button
-              className={this.state.todo ? "selected" : ""}
+              className={this.state.todo ? "selected btn btn-default todobutton" : "btn btn-default todobutton"}
               disabled={this.state.todo}
               onClick={(index) => this.setState({todo: !this.state.todo})}
             >To Do</button>
             <button
-              className={!this.state.todo ? "selected" : ""}
+              className={!this.state.todo ? "selected btn btn-default todobutton" : "btn btn-default todobutton"}
               disabled={!this.state.todo}
               onClick={(index) => this.setState({todo: !this.state.todo})}
             >Grocery</button>
@@ -141,10 +146,15 @@ class TodoContainer extends React.Component {
         <div className="row">
           <div className="col-sm-12">
             <form id="add-form">
-              <input type="text" className="form-control todoText" placeholder="Add an item..." onChange={this.handleTextChange} value={this.state.text}></input>
-              <button className="addButton" type="submit" onClick={this.handleAddItem} disabled={!this.state.text}>
-                <i className="fa fa-plus"></i>
-              </button>
+              <div className="input-group">
+
+                <input type="text" className="form-control todoText" placeholder="Add an item..." onChange={this.handleTextChange} value={this.state.text}></input>
+                <span className="input-group-btn">
+                  <button className="btn btn-default addButton" type="submit" onClick={this.handleAddItem} disabled={!this.state.text}>
+                    <i className="fa fa-plus"></i>
+                </button>
+              </span>
+              </div>
             </form>
           </div>
         </div>
@@ -152,5 +162,7 @@ class TodoContainer extends React.Component {
     )
   }
 }
+
+
 
 export default TodoContainer;

@@ -6,7 +6,9 @@ class Whiteboard extends React.Component {
     super(props);
     this.state = {
       lines: new Immutable.List(),
-      isDrawing: false
+      isDrawing: false,
+      start: false
+
     };
 
     this.handleMouseDown = this.handleMouseDown.bind(this);
@@ -34,7 +36,8 @@ class Whiteboard extends React.Component {
 
     this.setState(prevState => ({
       lines: prevState.lines.push(new Immutable.List([point])),
-      isDrawing: true
+      isDrawing: true,
+      start: true
     }));
 
   }
@@ -58,7 +61,8 @@ class Whiteboard extends React.Component {
 
     this.setState(prevState => ({
       lines: prevState.lines.push(new Immutable.List([point])),
-      isDrawing: true
+      isDrawing: true,
+      start: true
     }));
   }
 
@@ -86,8 +90,8 @@ class Whiteboard extends React.Component {
     const boundingRect = this.refs.drawArea.getBoundingClientRect();
     if(type==="click"){
       return new Immutable.Map({
-        x: event.clientX - boundingRect.left,
-        y: event.clientY - boundingRect.top,
+        x: event.clientX - boundingRect.left - 20,
+        y: event.clientY - boundingRect.top - 20,
       });
     } else if (type==="touch"){
       return new Immutable.Map({
@@ -107,6 +111,7 @@ class Whiteboard extends React.Component {
         onMouseDown={this.handleMouseDown}
         onMouseMove={this.handleMouseMove}
       >
+        {!this.state.start ? (<span className="fam">Welcome to Family Hub!!</span>):null}
         <Drawing lines={this.state.lines} />
         <button className="clearButton" onClick={()=>this.clear()} type="button">
 
