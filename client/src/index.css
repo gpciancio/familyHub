@@ -22,7 +22,7 @@ html, body {
   padding-top: 5px;
   color: rgb(245, 245, 245);
   font-family: 'Open Sans', sans-serif;
-  margin: 0 110px;
+  margin: 0 70px;
 }
 
 .introtextlg {
@@ -241,6 +241,8 @@ div .backhome {
   color: rgb(102, 136, 238);
   background-color: rgb(232, 238, 247);
 }
+
+/* weather */
 
 .weather {
   position: absolute;
@@ -594,6 +596,22 @@ span.fhletter:nth-child(9) {
     -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+/* mobile */
+.showOnMobile {
+  display: none;
+}
+@media(max-width: 760px){
+  .showOnMobile{
+    display: inherit;
+  }
+  .hideOnMobile{
+    display: none;
+  }
+  .famhubtitle{
+    font-size: 3.0em;
   }
 }
 

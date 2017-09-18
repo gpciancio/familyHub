@@ -4,7 +4,7 @@ import Calendar from './components/calendar';
 import Weather from './components/weather';
 import Whiteboard from './components/whiteboard';
 import TodoContainer from './components/todo-container';
-// import Chat from './components/chat';
+import Chat from './components/chat';
 import Chicken from './components/chicken';
 
 class App extends Component {
@@ -102,7 +102,7 @@ class App extends Component {
           />
         </div>
         <div id="chat" className="chat">
-          {/* <Chat /> */}
+          <Chat />
         </div>
         <div id="chicken">
           <Chicken
