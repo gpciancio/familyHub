@@ -24,7 +24,8 @@ class App extends Component {
     this.setState({email: newEmail});
   }
 
-  saveEmail = () => {
+  saveEmail = (e) => {
+    e.preventDefault();
     this.setState({emailInput: true});
     this.saveState();
     this.goToApp();

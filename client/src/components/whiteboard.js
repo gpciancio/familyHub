@@ -95,8 +95,8 @@ class Whiteboard extends React.Component {
       });
     } else if (type==="touch"){
       return new Immutable.Map({
-        x: event.touches[0].clientX - boundingRect.left,
-        y: event.touches[0].clientY - boundingRect.top,
+        x: event.touches[0].clientX - boundingRect.left - 20,
+        y: event.touches[0].clientY - boundingRect.top - 20,
       });
     }
   }
@@ -111,7 +111,7 @@ class Whiteboard extends React.Component {
         onMouseDown={this.handleMouseDown}
         onMouseMove={this.handleMouseMove}
       >
-        {!this.state.start ? (<span className="fam">Welcome to Family Hub!!</span>):null}
+        {!this.state.start ? (<div className="fam">Welcome to Family Hub!!</div>):null}
         <Drawing lines={this.state.lines} />
         <button className="clearButton" onClick={()=>this.clear()} type="button">
 
