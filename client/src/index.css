@@ -272,8 +272,9 @@ div .backhome {
 .fam {
   z-index: 50;
   font-family: 'Permanent Marker', cursive;
+  width: 40vw;
+  left: 4vw;
   position: absolute;
-  left: 25%;
   text-align: center;
   font-size: 37px;
 }
