@@ -38,23 +38,23 @@ class Splash extends React.Component {
                       <ul className="team-container">
                         <li className="team-item">
 
-                          <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAA0LAAAAJGViYTBhMjE4LTk4NjMtNGE0YS1iZTU2LTliNTFlNmJiYzBkNQ.jpg" alt="team member one"></img>
+                          <img src={require("../img/linda.jpg")} alt="team member one"></img>
                           <h1 className="team-name">Linda Call</h1>
                         </li>
                         <li className="team-item">
 
-                          <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAsGAAAAJGJkMGZmMDYzLTAwMDEtNDkxNy05YjA2LTQwNjcwNWJmMGVlMg.jpg" alt=""></img>
+                          <img src={require("../img/zach.jpg")} alt=""></img>
 
                           <h1 className="team-name">Zach Passarelli</h1>
                         </li>
                         <li className="team-item">
 
-                          <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAlbAAAAJGQyZGM0OTgwLTUxYWEtNDdhNS1hNGVlLWQ1MzM0Y2VkYTZmZg.jpg" alt=""></img>
+                          <img src={require("../img/tucker.jpg")} alt=""></img>
 
                           <h1 className="team-name">Tucker Triggs</h1>
                         </li>
                         <li className="team-item">
-                          <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAzIAAAAJGY1ZTNiYWNhLTNlZWEtNDEwMy05YTNmLWJlMmE4MmM0Yzc3NQ.jpg" alt=""></img>
+                          <img src={require("../img/gp.jpg")} alt=""></img>
 
                           <h1 className="team-name">GP Ciancio</h1>
                         </li>
