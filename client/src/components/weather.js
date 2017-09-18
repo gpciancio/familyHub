@@ -9,8 +9,11 @@ class Weather extends React.Component {
 
   render() {
     return (
+      <div>
+        <div className="weatherCover"></div>
         <iframe src="https://www.powr.io/plugins/weather/view?unique_label=6ab3252a_1500745897&external_type=iframe" title="Weather">
         </iframe>
+      </div>
     )
   }
 }

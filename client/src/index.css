@@ -43,7 +43,7 @@ html, body {
 .splash_container {
   display: block;
   z-index: 100;
-  background-image: url("./img/ipadfam.jpg");
+  background: #000 url("./img/ipadfam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -203,7 +203,8 @@ div .backhome {
   display: block;
   font-size: 2.5em;
   font-family: 'Exo', sans-serif;
-text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);}
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
 
 .calendar {
   position: relative;
@@ -245,6 +246,14 @@ div .backhome {
   position: absolute;
   top: -1vh;
   left: 87vw;
+}
+
+.weatherCover {
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(to bottom, rgba(125,185,232,0) 80%,rgba(227,233,255,1) 99%);
+  height: 101vh;
+  width: 13vw;
 }
 
 .weather iframe {
