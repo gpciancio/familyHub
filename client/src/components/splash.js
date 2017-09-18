@@ -79,21 +79,20 @@ class Splash extends React.Component {
                   <span className="fhletter">m</span>
                   <span className="fhletter">i</span>
                   <span className="fhletter">l</span>
-                  <span className="fhletter">y
-                  </span>
+                  <span className="fhletter">y</span>
                   <span className="fhletter">H</span>
                   <span className="fhletter">u</span>
                   <span className="fhletter">b</span>
                 </div>
                 <div className='introtextlg introtext'>Google Calendar integration requires your {"family's "}
                   Gmail account:</div>
-                <form className="form-inline">
+                <form className="form-inline" onSubmit={(e)=>this.props.saveEmail(e)}>
                   <div className="form-group form-group-lg emailform text-center">
                     <input type="email" className="paddingright form-control form-control-lg" id="email" placeholder="Enter Family Gmail" value={this.props.defaultEmail} onChange={(event) => this.props.updateEmailText(event.target.value)}></input>
                   </div>
                   <div className='introtext'>*Google calendar must be public to work*</div>
                   <div>
-                    <button type="submit" className="bigbutton btn btn-default btn-lg" onClick={this.props.saveEmail}>Enter
+                    <button type="submit" className="bigbutton btn btn-default btn-lg">Enter
                     </button>
                   </div>
                   <div className="splashbuttons">
