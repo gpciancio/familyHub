@@ -88,7 +88,7 @@ class Splash extends React.Component {
                   <div className="introtextlg introtext">FamilyHub is not supported on this screen size. We apologize for the inconvenience.</div>
                 </div>
                 <div className='hideOnMobile'>
-                  <div className='introtextlg introtext'>Google Calendar integration requires your family's
+                  <div className='introtextlg introtext'>Google Calendar integration requires your {" family's "}
                     Gmail account:
                   </div>
                   <form className="form-inline" onSubmit={(e)=>this.props.saveEmail(e)}>
